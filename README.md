@@ -4,8 +4,8 @@
 
 ## Integrantes do grupo:
 
-* Bruno Cardoso
-* Giovanni Vicario
-* Renato Lourenco
-* Marco Vallim
-* Wallyson Cristian
+* Bruno Cardoso - 3160394-7
+* Giovanni Vicario - 3160361-0
+* Renato Lourenco - 3164233-0 
+* Marco Vallim - 3163728-0
+* Wallysson Christian - 3168498-1
