@@ -10,14 +10,14 @@
 
 **Instruções do professor**: Para cada caso de uso, criar as tabelas com a especificação do caso de uso. Siga o exemplo dado abaixo:
 
-### 2.1. Caso de uso **REGISTRAR CHAMADO**
+### 2.1. Caso de uso **Pedido**
 
 | Campo          | Informação        |
 |---|---|
 | Identificador: | UC01              |
-| Nome:          | Registrar chamado |
-| Atores:        | Membro do Help Desk |
-| Sumário:       | Registra um novo chamado no sistema |
+| Nome:          | Pedido |
+| Atores:        | Lanchonete e Consumidor |
+| Sumário:       | Vê Pedido feito |
 
 | Fluxo Principal |
 |---|
@@ -32,7 +32,7 @@
 | 1) O sistema informa que não conseguiu recuperar as informações pelo CPF e apresenta a opção de cadastrar o cliente. |
 | 2) O membro do help desk preenche o formulário de cadastro do cliente. |
 | 3) O sistema registra os dados do cliente. |
-| 4) Volta ao passo (3) do fluxo principal. |
+//| 4) Volta ao passo (3) do fluxo principal. |
 
 **Instruções do professor**: As tabelas acima mostram um exemplo de especificação de **um único caso de uso**. Lembre-se de especificar cada um dos casos de uso.
 
