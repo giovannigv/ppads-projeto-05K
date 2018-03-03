@@ -57,11 +57,41 @@
 | 1) O sistema percebe que alguma informação está errada e mostra uma mensagem de erro. |
 | 2) Volta ao passo (1) do fluxo principal. |
 
-### 2.3. Caso de uso **Realiza Pedido**
+### 2.3. Caso de uso **Realiza Cadastro de Menu**
 
 | Campo          | Informação        |
 |---|---|
 | Identificador: | UC-03          |
+| Nome:          | Cadastra Menu |
+| Atores:        | Estabelecimento |
+| Sumário:       | Cadastra Informações de Menu |
+
+| Fluxo Principal |
+|---|
+| 1) Funcionário escreve todo o menu em um campo do tipo Textbox. |
+| 2) Funcionário clica em salvar. |
+| 3) Sistema salva o conteúdo do campo no banco de dados. |
+
+| Fluxo Alternativo (UC-03a): O funcionário não preencheu o campo |
+|---|
+| 1) O sistema identifica que o campo não foi preenchido e não habilita o botão de envio. |
+
+| Fluxo Alternativo (UC-03b): O funcionário opta por carregar o campo com um arquivo .txt |
+|---|
+| 1) O funcionário clica no botão para upload de um arquivo em de texto (anything.txt). |
+| 2) O sistema carrega todo o conteúdo do arquivo de texto no campo de menu. |
+| 2) O sistema salva o arquivo no banco de dados. |
+
+| Fluxo Alternativo (UC-03c): O funcionário opta por enviar o menu em PDF |
+|---|
+| 1) O funcionário clica no botão para upload de um arquivo em PDF. |
+| 2) O sistema salva o arquivo no banco de dados. |
+
+### 2.4. Caso de uso **Realiza Pedido**
+
+| Campo          | Informação        |
+|---|---|
+| Identificador: | UC-04          |
 | Nome:          | Pedido |
 | Atores:        | Cliente |
 | Sumário:       | Realizar Pedido |
