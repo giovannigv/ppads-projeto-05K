@@ -49,9 +49,10 @@
 | 2) Sistema cadastra as informações fornecidas no banco de dados |
 
 | Fluxo Alternativo (UC-02a): o Funcionário não cadastrou todas as informações |
+|---|
 | 1) O sistema identifica que há campos não cadastrados e não habilita o botão de envio|
 
-| Fluxo Alternativo (UC-02b): O funcionário cadastrou informações não validas. |
+| Fluxo Alternativo (UC-02b): O funcionário cadastrou informações não validas |
 |---|
 | 1) O sistema percebe que alguma informação está errada e mostra uma mensagem de erro. |
 | 2) Volta ao passo (1) do fluxo principal. |
