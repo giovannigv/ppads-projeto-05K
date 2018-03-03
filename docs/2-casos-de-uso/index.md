@@ -34,4 +34,26 @@
 | 1) O sistema percebe que alguma informação está errada e mostra uma mensagem de erro. |
 | 2) Volta ao passo (1) do fluxo principal. |
 
+Caso de Uso – Realiza Cadastro
+
+|Campo | Informação | 
+|---|---|
+| Identificador :| UC-02                                       |
+| Nome :             | Cadastra Estabelecimento|
+| Atores:             | Estabelecimento                  |
+| Sumario:          | Cadastra Informações         |
+
+| Fluxo Principal |
+| --- |
+| 1) O Funcionário cadastra os dados do estabelecimento no sistema |
+| 2) Sistema cadastra as informações fornecidas no banco de dados |
+
+| Fluxo Alternativo UC-02a: o Funcionário não cadastrou todas as informações |
+| 1) O sistema identifica que há campos não cadastrados e não habilita o botão de envio|
+
+| Fluxo Alternativo (UC-02b): O funcionário cadastrou informações não validas. |
+|---|
+| 1) O sistema percebe que alguma informação está errada e mostra uma mensagem de erro. |
+| 2) Volta ao passo (1) do fluxo principal. |
+
 **Instruções do professor**: As tabelas acima mostram um exemplo de especificação de **um único caso de uso**. Lembre-se de especificar cada um dos casos de uso.
