@@ -53,16 +53,20 @@ esperadas do sistema.
 
 ## Protótipos de tela
 
-### Protótipos para funcionalidade 1
+### Protótipos para funcionalidade Pedido
 
-![](proto1.png)
+![](Telas de Pedido.png)
 
-Fonte: Exemplos gerados pelo assistente do **Enterprise Architect**.
+Fonte: Exemplos gerados pelo cacoo.com
 
-### Protótipos para funcionalidade 2
+### Protótipos para funcionalidade Cadastro e Pagamento
 
-![](proto2.png)
+![](Telas de Cadastro e Pagamento.png)
 
-Fonte: Exemplos gerados pelo assistente do **Enterprise Architect**.
+Fonte: Exemplos gerados pelo cacoo.com
 
-### Protótipos para funcionalidade N
+### Protótipos para funcionalidade Verificar Pedido
+
+![](Telas de Verificar Pedido.png)
+
+Fonte: Exemplos gerados pelo cacoo.com
