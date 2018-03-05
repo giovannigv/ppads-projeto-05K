@@ -103,4 +103,15 @@
 | 3) Cliente confirma o pedido. |
 | 4) Sistema cadastra o pedido. |
 
+| Fluxo Alternativo (UC-04a): O cliente desiste da compra|
+|---|
+| 1) O cliente clica para cancelar. |
+| 2) Volta ao passo (1) do fluxo principal.  |
+
+| Fluxo Alternativo (UC-04b): O cliente não paga pelo pedido |
+|---|
+| 1) O cliente no momento do pagamento, cancela a compra |
+| 2) O sistema não confirma a compra.|
+| 3) Volta ao passo (1) do fluxo principal.  |
+
 **Instruções do professor**: As tabelas acima mostram um exemplo de especificação de **um único caso de uso**. Lembre-se de especificar cada um dos casos de uso.
