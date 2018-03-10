@@ -55,18 +55,18 @@ esperadas do sistema.
 
 ### Protótipos para funcionalidade Pedido
 
-![](Telas de Pedido.png)
+![Telas de Pedido](telas_de_pedido.png)
 
 Fonte: Exemplos gerados pelo cacoo.com
 
 ### Protótipos para funcionalidade Cadastro e Pagamento
 
-![](Telas de Cadastro e Pagamento.png)
+![Telas de Cadastro e Pagamento](telas_de_cadastro_e_pagamento.png)
 
-Fonte: Exemplos gerados pelo cacoo.com
+Fonte: Exemplos Telas de Verificar Pedidogerados pelo cacoo.com
 
 ### Protótipos para funcionalidade Verificar Pedido
 
-![](Telas de Verificar Pedido.png)
+![Telas de Verificar Pedido](telas_de_verificar_pedido.png)
 
 Fonte: Exemplos gerados pelo cacoo.com
