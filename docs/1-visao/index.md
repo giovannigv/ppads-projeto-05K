@@ -44,11 +44,10 @@ esperadas do sistema.
 ## Funcionalidades do produto
 
 * Realizar Cadastro
+* Realizar Busca por Produto
 * Realizar Pedido
 * Realizar Pagamento
 * Cadastrar Menu
-
-> **Comentário do professor:** Na seção "Funcionalidades do produto": haverá a função de busca/pesquisa de produto?
 
 ## Restrições do projeto
 
