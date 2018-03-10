@@ -8,6 +8,8 @@
 
 > **Comentário do professor:** Considerar a possibilidade de adicionar a funcionalidade de busca de um mesmo tipo de produto em diversos estabelecimentos.
 
+> **Comentário do professor:** Avaliar se realmente existe esta relação de herança ("extends") entre os casos de uso.
+
 ## 2. Especificação dos casos de uso
 
 **Instruções do professor**: Para cada caso de uso, criar as tabelas com a especificação do caso de uso. Siga o exemplo dado abaixo:
