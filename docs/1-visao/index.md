@@ -9,6 +9,8 @@ esperadas do sistema.
 * Agilizar o processo de vendas
 * Aumentar Ganhos
 
+> **Comentário do professor:** Na seção "Objetivos": seria melhor "Reduzir as filas" em lugar de "Eliminar as filas".
+
 ## Problema
 
 * Descrição do problema: O aplicativo tem o objetivo de diminuir as filas nas lanchonetes e restaurantes dentro do campus Higienópolis da Universidade Presbiteriana Mackenzie, otimizando o atendimento aos clientes, reduzindo filas de espera.
@@ -26,7 +28,11 @@ esperadas do sistema.
 
 * Sistema da lanchonete
 * Sistema de pagamento PagSeguro
- 
+
+> **Comentário do professor:** 	• Na seção "Integração com outros sitemas" (1): a integração com o sistema de cada lanchonete precisaria ser realizada caso-a-caso, uma vez que cada lanchonete pode ter um sistema diferente.
+
+> **Comentário do professor:** Na seção "Integração com outros sistemas" (2): não haverá nenhuma integração com um sistema de e-mails (por exemplo, para confirmar o cadastro de um novo cliente)?
+
 ## Interessados
 
 * Alunos do Mackenzie
@@ -45,6 +51,8 @@ esperadas do sistema.
 * Realizar Pedido
 * Realizar Pagamento
 * Cadastrar Menu
+
+> **Comentário do professor:** Na seção "Funcionalidades do produto": haverá a função de busca/pesquisa de produto?
 
 ## Restrições do projeto
 
