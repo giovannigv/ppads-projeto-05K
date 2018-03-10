@@ -4,7 +4,7 @@
 
 **Instruções do professor**: Insira abaixo o diagrama com os casos de uso do seu sistema. A imagem abaixo é somente um exemplo.
 
-![Caso de Uso](caso de uso.png)
+![Caso de Uso](Use Case MackFood.jpg)
 
 ## 2. Especificação dos casos de uso
 
