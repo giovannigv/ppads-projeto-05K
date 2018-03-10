@@ -5,11 +5,10 @@ esperadas do sistema.
 
 ## Objetivos
 
-* Eliminar as filas das lanchonetes
+* Reduzir as filas
 * Agilizar o processo de vendas
 * Aumentar Ganhos
 
-> **Comentário do professor:** Na seção "Objetivos": seria melhor "Reduzir as filas" em lugar de "Eliminar as filas".
 
 ## Problema
 
