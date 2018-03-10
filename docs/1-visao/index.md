@@ -29,8 +29,6 @@ esperadas do sistema.
 * Sistema de pagamento PagSeguro
 * Sistema de e-mails
 
-> **Comentário do professor:** 	• Na seção "Integração com outros sitemas" (1): a integração com o sistema de cada lanchonete precisaria ser realizada caso-a-caso, uma vez que cada lanchonete pode ter um sistema diferente.
-
 ## Interessados
 
 * Alunos do Mackenzie
