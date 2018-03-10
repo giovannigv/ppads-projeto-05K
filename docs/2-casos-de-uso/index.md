@@ -6,6 +6,8 @@
 
 ![Caso de Uso](Use Case MackFood.jpg)
 
+> **Comentário do professor:** Considerar a possibilidade de adicionar a funcionalidade de busca de um mesmo tipo de produto em diversos estabelecimentos.
+
 ## 2. Especificação dos casos de uso
 
 **Instruções do professor**: Para cada caso de uso, criar as tabelas com a especificação do caso de uso. Siga o exemplo dado abaixo:
@@ -102,6 +104,8 @@
 | 2) Cliente escolhe comida e quantidade. |
 | 3) Cliente confirma o pedido. |
 | 4) Sistema cadastra o pedido. |
+
+> **Comentário do professor:** No caso de uso "Realiza pedido": não há a possibilidade de cada pedido ser formado por diferentes itens?
 
 | Fluxo Alternativo (UC-04a): O cliente desiste da compra|
 |---|
