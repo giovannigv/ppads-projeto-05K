@@ -4,7 +4,11 @@
 
 **Instruções do professor**: Insira abaixo o diagrama com os casos de uso do seu sistema. A imagem abaixo é somente um exemplo.
 
-![Caso de Uso](caso de uso.png)
+![Caso de Uso](Use Case MackFood.jpg)
+
+> **Comentário do professor:** Considerar a possibilidade de adicionar a funcionalidade de busca de um mesmo tipo de produto em diversos estabelecimentos.
+
+> **Comentário do professor:** Avaliar se realmente existe esta relação de herança ("extends") entre os casos de uso.
 
 ## 2. Especificação dos casos de uso
 
@@ -102,6 +106,8 @@
 | 2) Cliente escolhe comida e quantidade. |
 | 3) Cliente confirma o pedido. |
 | 4) Sistema cadastra o pedido. |
+
+> **Comentário do professor:** No caso de uso "Realiza pedido": não há a possibilidade de cada pedido ser formado por diferentes itens?
 
 | Fluxo Alternativo (UC-04a): O cliente desiste da compra|
 |---|

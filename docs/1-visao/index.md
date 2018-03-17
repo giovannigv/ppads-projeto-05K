@@ -5,9 +5,10 @@ esperadas do sistema.
 
 ## Objetivos
 
-* Eliminar as filas das lanchonetes
+* Reduzir as filas
 * Agilizar o processo de vendas
 * Aumentar Ganhos
+
 
 ## Problema
 
@@ -26,7 +27,8 @@ esperadas do sistema.
 
 * Sistema da lanchonete
 * Sistema de pagamento PagSeguro
- 
+* Sistema de e-mails
+
 ## Interessados
 
 * Alunos do Mackenzie
@@ -42,6 +44,7 @@ esperadas do sistema.
 ## Funcionalidades do produto
 
 * Realizar Cadastro
+* Realizar Busca por Produto
 * Realizar Pedido
 * Realizar Pagamento
 * Cadastrar Menu
