@@ -14,7 +14,7 @@
 
 **Instruções do professor**: Para cada caso de uso, criar as tabelas com a especificação do caso de uso. Siga o exemplo dado abaixo:
 
-### 2.1. Caso de uso **Realiza Cadastro Cliente**
+### 2.1. Caso de uso **Manter Cadastro Cliente**
 
 | Campo          | Informação        |
 |---|---|
@@ -38,7 +38,7 @@
 | 1) O sistema percebe que alguma informação está errada e mostra uma mensagem de erro. |
 | 2) Volta ao passo (1) do fluxo principal. |
 
-### 2.2. Caso de uso **Realiza Cadastro Estabelecimento**
+### 2.2. Caso de uso **Manter Cadastro Estabelecimento**
 
 |Campo | Informação | 
 |---|---|
@@ -61,7 +61,7 @@
 | 1) O sistema percebe que alguma informação está errada e mostra uma mensagem de erro. |
 | 2) Volta ao passo (1) do fluxo principal. |
 
-### 2.3. Caso de uso **Realiza Cadastro de Menu**
+### 2.3. Caso de uso **Manter Cadastro Menu**
 
 | Campo          | Informação        |
 |---|---|
@@ -91,7 +91,7 @@
 | 1) O funcionário clica no botão para upload de um arquivo em PDF. |
 | 2) O sistema salva o arquivo no banco de dados. |
 
-### 2.4. Caso de uso **Realizar Pedido**
+### 2.4. Caso de uso **Manter Pedido**
 
 | Campo          | Informação        |
 |---|---|
