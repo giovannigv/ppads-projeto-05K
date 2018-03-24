@@ -104,25 +104,30 @@
 |---|
 | 1) Cliente escolhe um estabelecimento. |
 | 2) Cliente escolhe itens a serem pedidos e quantidade. |
-| 3) Cliente confirma o pedido. |
-| 4) Sistema cadastra o pedido. |
+| 3) Cliente visualiza pedido. |
+| 4) Cliente confirma o pedido. |
+| 5) Sistema cadastra o pedido. |
+| 6) Sistema cria caso de uso de pagamento. |
 
-
-| Fluxo Alternativo (UC-04a): O cliente desiste da compra|
-|---|
-| 1) O cliente clica para cancelar. |
-| 2) Volta ao passo (1) do fluxo principal.  |
-
-| Fluxo Alternativo (UC-04b): O cliente não paga pelo pedido |
+| Fluxo Alternativo (UC-04a): O cliente não paga pelo pedido |
 |---|
 | 1) O cliente no momento do pagamento, cancela a compra |
 | 2) O sistema não confirma a compra.|
 | 3) Volta ao passo (1) do fluxo principal.  |
+** é aqui? **
 
-| Fluxo Alternativo (UC-04c): O cliente exclui alguns pedidos da compra|
+| Fluxo Alternativo (UC-04b): O cliente exclui itens da compra|
 |---|
 | 1) Cliente seleciona os itens a serem excluídos |
 | 2) Cliente confirma a exclusão dos itens |
-| 3) Cliente prossegue com a compra |
+| 3) Volta ao passo (3) do fluxo principal |
+
+| Fluxo Alternativo (UC-04b): O cliente escolhe mais itens para compra|
+|---|
+| 1) Cliente visualiza os pedidos |
+| 2) Cliente confirma desejo de acrescentar mais itens ao pedido |
+| 3) Volta ao passo (2) do fluxo principal |
+
+
 
 **Instruções do professor**: As tabelas acima mostram um exemplo de especificação de **um único caso de uso**. Lembre-se de especificar cada um dos casos de uso.
