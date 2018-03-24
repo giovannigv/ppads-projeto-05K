@@ -91,7 +91,7 @@
 | 1) O funcionário clica no botão para upload de um arquivo em PDF. |
 | 2) O sistema salva o arquivo no banco de dados. |
 
-### 2.4. Caso de uso **Realiza Pedido**
+### 2.4. Caso de uso **Realizar Pedido**
 
 | Campo          | Informação        |
 |---|---|
@@ -103,11 +103,10 @@
 | Fluxo Principal |
 |---|
 | 1) Cliente escolhe um estabelecimento. |
-| 2) Cliente escolhe comida e quantidade. |
+| 2) Cliente escolhe itens a serem pedidos e quantidade. |
 | 3) Cliente confirma o pedido. |
 | 4) Sistema cadastra o pedido. |
 
-> **Comentário do professor:** No caso de uso "Realiza pedido": não há a possibilidade de cada pedido ser formado por diferentes itens?
 
 | Fluxo Alternativo (UC-04a): O cliente desiste da compra|
 |---|
@@ -119,5 +118,11 @@
 | 1) O cliente no momento do pagamento, cancela a compra |
 | 2) O sistema não confirma a compra.|
 | 3) Volta ao passo (1) do fluxo principal.  |
+
+| Fluxo Alternativo (UC-04c): O cliente exclui alguns pedidos da compra|
+|---|
+| 1) Cliente seleciona os itens a serem excluídos |
+| 2) Cliente confirma a exclusão dos itens |
+| 3) Cliente prossegue com a compra |
 
 **Instruções do professor**: As tabelas acima mostram um exemplo de especificação de **um único caso de uso**. Lembre-se de especificar cada um dos casos de uso.
