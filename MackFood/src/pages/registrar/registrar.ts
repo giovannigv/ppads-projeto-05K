@@ -22,4 +22,7 @@ export class RegistrarPage {
     console.log('ionViewDidLoad RegistrarPage');
   }
 
+  onSubmit(){
+    //alert ou toatr que cadastrou e voltar para a pagina inicial
+  }
 }

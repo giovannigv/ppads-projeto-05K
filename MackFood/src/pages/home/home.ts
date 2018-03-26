@@ -18,6 +18,6 @@ export class HomePage {
   }
 
   signUpUser(){
-    this.navCtrl.setRoot(RegistrarPage);
+    this.navCtrl.push(RegistrarPage);
   }
 }
