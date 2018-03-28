@@ -13,7 +13,7 @@ export class HomePage {
 
   }
 
-  singInUser(){
+  signInUser(){
     this.navCtrl.setRoot(MenuPage);
   }
 
