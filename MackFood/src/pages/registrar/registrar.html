@@ -8,9 +8,8 @@
     </ion-header>
 
     <ion-card-content>
-      <ion-list no-lines>
+      <ion-list >
         <form #myForm='ngForm' (ngSubmit)="onSubmit(myForm)">
-
           <ion-item>
             <ion-label floating>Username</ion-label>
             <ion-input type="text"></ion-input>
@@ -28,7 +27,7 @@
             <ion-label floating>Senha</ion-label>
             <ion-input type="password" name="senha"></ion-input>
           </ion-item>
-          <button ion-button block>Cadastrar</button>
+        <button ion-button block>Cadastrar</button>
         </form>
       </ion-list>
     </ion-card-content>
