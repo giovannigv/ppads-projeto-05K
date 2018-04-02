@@ -4,7 +4,7 @@
 
 **Instruções do professor**: Insira abaixo o diagrama com os casos de uso do seu sistema. A imagem abaixo é somente um exemplo.
 
-![Caso de Uso](Use Case MackFood.jpg)
+![Caso de Uso](use-case-mack-food.png)
 
 > **Comentário do professor:** Considerar a possibilidade de adicionar a funcionalidade de busca de um mesmo tipo de produto em diversos estabelecimentos.
 
