@@ -206,15 +206,30 @@
 
 **Instruções do professor**: As tabelas acima mostram um exemplo de especificação de **um único caso de uso**. Lembre-se de especificar cada um dos casos de uso.
 
+### 2.5. Caso de uso **Fazer Pagamento**
 
-### 2.5. Caso de uso **Verificar Pedido**
+| Campo          | Informação        |
+|---|---|
+| Identificador: | UC-06          |
+| Nome:          | Pagamento |
+| Atores:        | Cliente |
+| Sumário:       | Fazer Pagamento |
+
+| Fluxo Principal |
+|---|
+| 1) Cliente seleciona forma de pagamento. |
+| 2) Sistema direciona cliente para api que controla o pagamento (PagSeguro). |
+
+
+
+### 2.6. Caso de uso **Verificar Pedido**
 
 | Campo          | Informação        |
 |---|---|
 | Identificador: | UC-05          |
 | Nome:          | Pedido |
 | Atores:        | Estabelecimento |
-| Sumário:       | Realizar Pedido |
+| Sumário:       | Verificar Pedido |
 
 | Fluxo Principal |
 |---|
@@ -225,7 +240,8 @@
 | 5) Estabelecimento marca pedido como fechado. |
 
 | Fluxo Alternativo (UC-05a): Não há pedidos em aberto |
->>>>>>> 091ad9f1ee327d1b7fbd63aecdd5bd8ce7b07a8a
 |---|
 | 1) Empresa faz login no sistema. |
 | 2) Empresa recebe mensagem de que não há pedidos em aberto. |
+
+
