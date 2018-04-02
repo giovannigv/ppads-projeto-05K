@@ -10,41 +10,39 @@
 
 ### 2.1. Caso de uso **Manter Cadastro Cliente**
 
-| Campo          | Informação        |
+| Campo | Informação |
 |---|---|
-| Identificador: | UC-01              |
+| Identificador: | UC-01   |
 | Nome:          | Manter cadastro cliente |
 | Atores:        | Cliente |
-| Sumário:       | Cadastra informações |
+| Sumário:       | Cadastra informações do cliente |
 
 | Fluxo Principal |
 |---|
 | 1) Cliente cadastra suas informações no sistema. |
 | 2) Sistema cadastra cliente no banco de dados. |
 
+| Fluxo Alternativo (UC-01a): Cliente não cadastrou todas as informações |
+|---|
+| 1) Sistema identifica que há campos não cadastrados e não habilita o botão de envio |
+
 ### 2.2. Caso de uso **Manter Cadastro Estabelecimento**
 
-|Campo | Informação | 
+| Campo | Informação | 
 |---|---|
-| Identificador :| UC-02                   |
-| Nome :         | Cadastra Estabelecimento|
-| Atores:        | Estabelecimento         |
-| Sumario:       | Cadastra Informações    |
+| Identificador: | UC-02           |
+| Nome :         | Manter cadastro estabelecimento |
+| Atores:        | Estabelecimento |
+| Sumário:       | Cadastra informações do estabelecimento |
 
 | Fluxo Principal |
-| --- |
-| 1) O Funcionário cadastra os dados do estabelecimento no sistema |
+|---|
+| 1) Funcionário cadastra os dados do estabelecimento no sistema |
 | 2) Sistema cadastra as informações fornecidas no banco de dados |
 
-| Fluxo Alternativo (UC-02a): o Funcionário não cadastrou todas as informações |
+| Fluxo Alternativo (UC-02a): Funcionário não cadastrou todas as informações |
 |---|
-| 1) O sistema identifica que há campos não cadastrados e não habilita o botão de envio|
-<<<<<<< HEAD
-
-| Fluxo Alternativo (UC-02b): O funcionário cadastrou informações não validas |
-|---|
-| 1) O sistema percebe que alguma informação está errada e mostra uma mensagem de erro. |
-| 2) Volta ao passo (1) do fluxo principal. |
+| 1) Sistema identifica que há campos não cadastrados e não habilita o botão de envio |
 
 ### 2.3. Caso de uso **Realizar Cadastro de Menu**
 
