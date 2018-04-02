@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
+import { AlertController } from 'ionic-angular';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
-/**
- * Generated class for the RegistrarPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { HomePage } from './../home/home';
+import { CadastroProvider } from './../../providers/cadastro/cadastro';
 
 @IonicPage()
 @Component({
@@ -15,14 +13,49 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class RegistrarPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  private userCad: FormGroup;
+
+  constructor(public navCtrl: NavController,
+    public navParams: NavParams,
+    private cadastroProvider: CadastroProvider,
+    private fb: FormBuilder,
+    private alertCtrl: AlertController) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad RegistrarPage');
+  ngOnInit() {
+    this.userCad = this.fb.group({
+      email: ['', [Validators.required, Validators.email]],
+      nome: ['', [Validators.required]],
+      username: ['', [Validators.required]],
+      password: ['', [Validators.required]]
+    });
   }
 
-  onSubmit(){
-    //alert ou toatr que cadastrou e voltar para a pagina inicial
+  onSubmit() {
+    console.log(this.userCad.value);
+    this.cadastroProvider.cadastraUser(this.userCad.value).subscribe(
+      res => {
+        console.log(res);
+        setTimeout(() => this.presentAlert('SUCESSO :)', 'Cadastrado com Sucesso!!!'), 100);
+        this.navCtrl.setRoot(HomePage)
+      },
+      err => {
+        console.log(err);
+        this.presentAlert('Ops... Temos um problema', err._body);
+      }
+    )
   }
+
+  presentAlert(title: string, errorMsg: string) {
+    let alert = this.alertCtrl.create({
+      title: title,
+      subTitle: errorMsg,
+      buttons: [{
+        text: 'Ok',
+        role: 'Ok'
+      }]
+    });
+    alert.present();
+  }
+
 }

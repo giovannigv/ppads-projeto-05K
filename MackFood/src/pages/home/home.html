@@ -1,23 +1,27 @@
 <ion-content class="background">
   <ion-card>
     <ion-card-header>
-        <img class="img" src="../../assets/imgs/MackFood1.png"/>
+      <img class="img" src="../../assets/imgs/MackFood1.png" />
     </ion-card-header>
     <ion-card-content>
       <ion-list no-lines>
-        <ion-item>
-          <ion-label floating>Username</ion-label>
-          <ion-input type="text"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label floating>Password</ion-label>
-          <ion-input type="Password"></ion-input>
-        </ion-item>
-        <ion-item floating>
-          <p>Esqueceu a senha? <a>Clique aqui!</a></p>
-        </ion-item>
-        <button ion-button color="danger" block (click)="signInUser()" >Entrar</button>
-        <button ion-button color="blue" block  (click)="signUpUser()" >Registrar</button>
+        <form (ngSubmit)="signInUser()" [formGroup]="user">
+          <ion-item>
+            <ion-label floating >Username</ion-label>
+            <ion-input formControlName="username" type="text"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label floating >Password</ion-label>
+            <ion-input formControlName="password" type="Password"></ion-input>
+          </ion-item>
+          <ion-item floating>
+            <p>Esqueceu a senha?
+              <a>Clique aqui!</a>
+            </p>
+          </ion-item>
+          <button ion-button color="danger" block [disabled]="user.invalid || user.untouched">Entrar</button>
+        </form>
+        <button ion-button color="blue" block (click)="signUpUser()">Registrar</button>
       </ion-list>
     </ion-card-content>
   </ion-card>

@@ -9,26 +9,25 @@
 
     <ion-card-content>
       <ion-list no-lines>
-        <form #myForm='ngForm' (ngSubmit)="onSubmit(myForm)">
+        <form (ngSubmit)="onSubmit()" [formGroup]="userCad">
 
           <ion-item>
             <ion-label floating>Username</ion-label>
-            <ion-input type="text"></ion-input>
+            <ion-input formControlName="username" type="text"></ion-input>
           </ion-item>
-
           <ion-item>
             <ion-label floating>Nome</ion-label>
-            <ion-input type="text" name="nome"></ion-input>
+            <ion-input formControlName="nome" type="text" name="nome"></ion-input>
           </ion-item>
           <ion-item>
             <ion-label floating>Email</ion-label>
-            <ion-input type="email" name="email"></ion-input>
+            <ion-input formControlName="email" type="email" name="email"></ion-input>
           </ion-item>
           <ion-item>
             <ion-label floating>Senha</ion-label>
-            <ion-input type="password" name="senha"></ion-input>
+            <ion-input formControlName="password" type="password" name="senha"></ion-input>
           </ion-item>
-          <button ion-button block>Cadastrar</button>
+          <button ion-button block [disabled]="userCad.invalid || userCad.untouched">Cadastrar</button>
         </form>
       </ion-list>
     </ion-card-content>
