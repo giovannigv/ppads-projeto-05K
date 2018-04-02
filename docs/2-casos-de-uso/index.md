@@ -205,3 +205,27 @@
 >>>>>>> 091ad9f1ee327d1b7fbd63aecdd5bd8ce7b07a8a
 
 **Instruções do professor**: As tabelas acima mostram um exemplo de especificação de **um único caso de uso**. Lembre-se de especificar cada um dos casos de uso.
+
+
+### 2.5. Caso de uso **Verificar Pedido**
+
+| Campo          | Informação        |
+|---|---|
+| Identificador: | UC-05          |
+| Nome:          | Pedido |
+| Atores:        | Empresa |
+| Sumário:       | Realizar Pedido |
+
+| Fluxo Principal |
+|---|
+| 1) Empresa faz login no sistema. |
+| 2) Empresa visualiza pedidos em aberto. |
+| 3) Empresa seleciona pedido para verificar. |
+| 4) Empresa verifica pedido. |
+| 5) Empresa marca pedido como fechado. |
+
+| Fluxo Alternativo (UC-05a): Não há pedidos em aberto |
+>>>>>>> 091ad9f1ee327d1b7fbd63aecdd5bd8ce7b07a8a
+|---|
+| 1) Empresa faz login no sistema. |
+| 2) Empresa recebe mensagem de que não há pedidos em aberto. |
