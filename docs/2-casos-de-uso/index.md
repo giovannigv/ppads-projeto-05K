@@ -79,24 +79,37 @@
 | Fluxo Principal |
 |---|
 | 1) Cliente escolhe um estabelecimento |
-| 2) Cliente escolhe comida e quantidade |
-| 3) Cliente confirma o pedido |
-| 4) Sistema cadastra o pedido |
+| 2) Sistema mostra opções de comida do estabelecimento |
+| 2) Cliente escolhe comida e quantidade e confirma |
+| 4) Sistema cadastra o pedido no carrinho e direciona para carrinho |
 
-> **Comentário do professor:** No caso de uso "Realiza pedido": não há a possibilidade de cada pedido ser formado por diferentes itens?
-
-| Fluxo Alternativo (UC-04a): O cliente desiste da compra |
+| Fluxo Alternativo (UC-04a): Cliente exclui comida do carrinho |
 |---|
-| 1) O cliente clica para cancelar |
-| 2) Volta ao passo (1) do fluxo principal  |
+| 1) Cliente seleciona a opção de excluir comida do carrinho |
+| 2) Sistema pede confirmação |
+| 3) Cliente confirma |
+| 4) Sistema salva alteração e volta para o carrinho |
 
-| Fluxo Alternativo (UC-04b): O cliente não paga pelo pedido |
-=======
-
-| Fluxo Alternativo (UC-02b): O funcionário cadastrou informações não validas |
+| Fluxo Alternativo (UC-04b): Cliente altera quantidade |
 |---|
-| 1) O sistema percebe que alguma informação está errada e mostra uma mensagem de erro |
-| 2) Volta ao passo (1) do fluxo principal |
+| 1) Cliente seleciona a opção de excluir pedido |
+| 2) Sistema pede confirmação |
+| 3) Cliente confirma |
+| 4) Sistema salva alteração e volta para |
+
+| Fluxo Alternativo (UC-04c): Cliente continua comprando |
+|---|
+| 1) Cliente seleciona a opção de excluir pedido |
+| 2) Sistema pede confirmação |
+| 3) Cliente confirma |
+| 4) Sistema salva alteração e volta para |
+
+| Fluxo Alternativo (UC-04d): Cliente finaliza pedido |
+|---|
+| 1) Cliente seleciona a opção de excluir pedido |
+| 2) Sistema pede confirmação |
+| 3) Cliente confirma |
+| 4) Sistema salva alteração e volta para |
 
 ### 2.3. Caso de uso **Manter Cadastro Menu**
 
