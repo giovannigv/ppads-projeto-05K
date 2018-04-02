@@ -2,51 +2,27 @@
 
 ## 1. Diagrama de casos de uso
 
-**Instruções do professor**: Insira abaixo o diagrama com os casos de uso do seu sistema. A imagem abaixo é somente um exemplo.
-
 ![Caso de Uso](use-case-mack-food.png)
-
-> **Comentário do professor:** Considerar a possibilidade de adicionar a funcionalidade de busca de um mesmo tipo de produto em diversos estabelecimentos.
-
-> **Comentário do professor:** Avaliar se realmente existe esta relação de herança ("extends") entre os casos de uso.
 
 ## 2. Especificação dos casos de uso
 
 **Instruções do professor**: Para cada caso de uso, criar as tabelas com a especificação do caso de uso. Siga o exemplo dado abaixo:
 
-<<<<<<< HEAD
-### 2.1. Caso de uso **Realiza Cadastro Cliente**
-=======
 ### 2.1. Caso de uso **Manter Cadastro Cliente**
->>>>>>> 091ad9f1ee327d1b7fbd63aecdd5bd8ce7b07a8a
 
 | Campo          | Informação        |
 |---|---|
 | Identificador: | UC-01              |
-| Nome:          | Cadastra informações |
+| Nome:          | Manter cadastro cliente |
 | Atores:        | Cliente |
 | Sumário:       | Cadastra informações |
 
 | Fluxo Principal |
 |---|
-| 1) Cliente Cadastra suas informações no sistema. |
+| 1) Cliente cadastra suas informações no sistema. |
 | 2) Sistema cadastra cliente no banco de dados. |
 
-| Fluxo Alternativo (UC-01a): O Cliente não cadastrou todas as informações. |
-|---|
-| 1) O sistema identifica o que está faltando informações e mostra uma mensagem de erro. |
-| 2) Volta ao passo (1) do fluxo principal. |
-
-| Fluxo Alternativo (UC-01b): O Cliente cadastrou informações não validas. |
-|---|
-| 1) O sistema percebe que alguma informação está errada e mostra uma mensagem de erro. |
-| 2) Volta ao passo (1) do fluxo principal. |
-
-<<<<<<< HEAD
-### 2.2. Caso de uso **Realiza Cadastro Estabelecimento**
-=======
 ### 2.2. Caso de uso **Manter Cadastro Estabelecimento**
->>>>>>> 091ad9f1ee327d1b7fbd63aecdd5bd8ce7b07a8a
 
 |Campo | Informação | 
 |---|---|
