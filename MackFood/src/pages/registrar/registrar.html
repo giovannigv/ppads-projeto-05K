@@ -1,0 +1,35 @@
+<ion-content class="background">
+  <ion-card>
+
+    <ion-header>
+      <ion-navbar>
+        <ion-title>Novo Usuário</ion-title>
+      </ion-navbar>
+    </ion-header>
+
+    <ion-card-content>
+      <ion-list >
+        <form #myForm='ngForm' (ngSubmit)="onSubmit(myForm)">
+          <ion-item>
+            <ion-label floating>Username</ion-label>
+            <ion-input type="text"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label floating>Nome</ion-label>
+            <ion-input type="text" name="nome"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label floating>Email</ion-label>
+            <ion-input type="email" name="email"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label floating>Senha</ion-label>
+            <ion-input type="password" name="senha"></ion-input>
+          </ion-item>
+        <button ion-button block>Cadastrar</button>
+        </form>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

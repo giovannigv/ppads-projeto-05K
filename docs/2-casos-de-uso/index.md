@@ -14,7 +14,11 @@
 
 **Instruções do professor**: Para cada caso de uso, criar as tabelas com a especificação do caso de uso. Siga o exemplo dado abaixo:
 
+<<<<<<< HEAD
+### 2.1. Caso de uso **Realiza Cadastro Cliente**
+=======
 ### 2.1. Caso de uso **Manter Cadastro Cliente**
+>>>>>>> 091ad9f1ee327d1b7fbd63aecdd5bd8ce7b07a8a
 
 | Campo          | Informação        |
 |---|---|
@@ -38,7 +42,11 @@
 | 1) O sistema percebe que alguma informação está errada e mostra uma mensagem de erro. |
 | 2) Volta ao passo (1) do fluxo principal. |
 
+<<<<<<< HEAD
+### 2.2. Caso de uso **Realiza Cadastro Estabelecimento**
+=======
 ### 2.2. Caso de uso **Manter Cadastro Estabelecimento**
+>>>>>>> 091ad9f1ee327d1b7fbd63aecdd5bd8ce7b07a8a
 
 |Campo | Informação | 
 |---|---|
@@ -55,6 +63,68 @@
 | Fluxo Alternativo (UC-02a): o Funcionário não cadastrou todas as informações |
 |---|
 | 1) O sistema identifica que há campos não cadastrados e não habilita o botão de envio|
+<<<<<<< HEAD
+
+| Fluxo Alternativo (UC-02b): O funcionário cadastrou informações não validas |
+|---|
+| 1) O sistema percebe que alguma informação está errada e mostra uma mensagem de erro. |
+| 2) Volta ao passo (1) do fluxo principal. |
+
+### 2.3. Caso de uso **Realiza Cadastro de Menu**
+
+| Campo          | Informação        |
+|---|---|
+| Identificador: | UC-03          |
+| Nome:          | Cadastra Menu |
+| Atores:        | Estabelecimento |
+| Sumário:       | Cadastra Informações de Menu |
+
+| Fluxo Principal |
+|---|
+| 1) Funcionário escreve todo o menu em um campo do tipo Textbox. |
+| 2) Funcionário clica em salvar. |
+| 3) Sistema salva o conteúdo do campo no banco de dados. |
+
+| Fluxo Alternativo (UC-03a): O funcionário não preencheu o campo |
+|---|
+| 1) O sistema identifica que o campo não foi preenchido e não habilita o botão de envio. |
+
+| Fluxo Alternativo (UC-03b): O funcionário opta por carregar o campo com um arquivo .txt |
+|---|
+| 1) O funcionário clica no botão para upload de um arquivo em de texto (anything.txt). |
+| 2) O sistema carrega todo o conteúdo do arquivo de texto no campo de menu. |
+| 2) O sistema salva o arquivo no banco de dados. |
+
+| Fluxo Alternativo (UC-03c): O funcionário opta por enviar o menu em PDF |
+|---|
+| 1) O funcionário clica no botão para upload de um arquivo em PDF. |
+| 2) O sistema salva o arquivo no banco de dados. |
+
+### 2.4. Caso de uso **Realiza Pedido**
+
+| Campo          | Informação        |
+|---|---|
+| Identificador: | UC-04          |
+| Nome:          | Pedido |
+| Atores:        | Cliente |
+| Sumário:       | Realizar Pedido |
+
+| Fluxo Principal |
+|---|
+| 1) Cliente escolhe um estabelecimento. |
+| 2) Cliente escolhe comida e quantidade. |
+| 3) Cliente confirma o pedido. |
+| 4) Sistema cadastra o pedido. |
+
+> **Comentário do professor:** No caso de uso "Realiza pedido": não há a possibilidade de cada pedido ser formado por diferentes itens?
+
+| Fluxo Alternativo (UC-04a): O cliente desiste da compra|
+|---|
+| 1) O cliente clica para cancelar. |
+| 2) Volta ao passo (1) do fluxo principal.  |
+
+| Fluxo Alternativo (UC-04b): O cliente não paga pelo pedido |
+=======
 
 | Fluxo Alternativo (UC-02b): O funcionário cadastrou informações não validas |
 |---|
@@ -110,10 +180,13 @@
 | 6) Sistema cria caso de uso de pagamento. |
 
 | Fluxo Alternativo (UC-04a): O cliente não paga pelo pedido |
+>>>>>>> 091ad9f1ee327d1b7fbd63aecdd5bd8ce7b07a8a
 |---|
 | 1) O cliente no momento do pagamento, cancela a compra |
 | 2) O sistema não confirma a compra.|
 | 3) Volta ao passo (1) do fluxo principal.  |
+<<<<<<< HEAD
+=======
 ** é aqui? **
 
 | Fluxo Alternativo (UC-04b): O cliente exclui itens da compra|
@@ -129,5 +202,6 @@
 | 3) Volta ao passo (2) do fluxo principal |
 
 
+>>>>>>> 091ad9f1ee327d1b7fbd63aecdd5bd8ce7b07a8a
 
 **Instruções do professor**: As tabelas acima mostram um exemplo de especificação de **um único caso de uso**. Lembre-se de especificar cada um dos casos de uso.
