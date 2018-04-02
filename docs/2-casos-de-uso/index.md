@@ -70,7 +70,7 @@
 | 1) O sistema percebe que alguma informação está errada e mostra uma mensagem de erro. |
 | 2) Volta ao passo (1) do fluxo principal. |
 
-### 2.3. Caso de uso **Realiza Cadastro de Menu**
+### 2.3. Caso de uso **Realizar Cadastro de Menu**
 
 | Campo          | Informação        |
 |---|---|
@@ -100,7 +100,7 @@
 | 1) O funcionário clica no botão para upload de um arquivo em PDF. |
 | 2) O sistema salva o arquivo no banco de dados. |
 
-### 2.4. Caso de uso **Realiza Pedido**
+### 2.4. Caso de uso **Realizar Pedido**
 
 | Campo          | Informação        |
 |---|---|
