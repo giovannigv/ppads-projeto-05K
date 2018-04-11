@@ -5,6 +5,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { HomePage } from './../home/home';
 import { CadastroProvider } from './../../providers/cadastro/cadastro';
+import { RegistraLanchonetePage } from '../registra-lanchonete/registra-lanchonete'
 
 @IonicPage()
 @Component({
@@ -26,7 +27,6 @@ export class RegistrarPage {
     this.userCad = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
       nome: ['', [Validators.required]],
-      username: ['', [Validators.required]],
       password: ['', [Validators.required]]
     });
   }
@@ -44,6 +44,11 @@ export class RegistrarPage {
         this.presentAlert('Ops... Temos um problema', err._body);
       }
     )
+  }
+
+  signLanchonete(){
+    //this.navCtrl.push(RegistraLanchonetePage);
+    this.navCtrl.setRoot(RegistraLanchonetePage);
   }
 
   presentAlert(title: string, errorMsg: string) {

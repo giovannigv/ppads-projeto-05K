@@ -11,13 +11,15 @@ import { MenuPage } from '../pages/menu/menu';
 import { RegistrarPage } from '../pages/registrar/registrar';
 import { ConsultaProvider } from '../providers/consulta/consulta';
 import { CadastroProvider } from '../providers/cadastro/cadastro';
+import { RegistraLanchonetePage } from '../pages/registra-lanchonete/registra-lanchonete';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     MenuPage,
-    RegistrarPage
+    RegistrarPage,
+    RegistraLanchonetePage
   ],
   imports: [
     BrowserModule,
@@ -29,7 +31,8 @@ import { CadastroProvider } from '../providers/cadastro/cadastro';
     MyApp,
     HomePage,
     MenuPage,
-    RegistrarPage
+    RegistrarPage,
+    RegistraLanchonetePage
   ],
   providers: [
     HttpModule,
