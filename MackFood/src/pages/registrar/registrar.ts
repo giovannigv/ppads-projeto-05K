@@ -5,6 +5,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { HomePage } from './../home/home';
 import { CadastroProvider } from './../../providers/cadastro/cadastro';
+import { RegistraLanchonetePage } from '../registra-lanchonete/registra-lanchonete'
 
 @IonicPage()
 @Component({
@@ -43,6 +44,12 @@ export class RegistrarPage {
         this.presentAlert('Ops... Temos um problema', err._body);
       }
     )
+  }
+  //TODO: Colocar um loading quando estiver mandando a informaçao 
+
+  signLanchonete(){
+    //this.navCtrl.push(RegistraLanchonetePage);
+    this.navCtrl.setRoot(RegistraLanchonetePage);
   }
 
   presentAlert(title: string, errorMsg: string) {
