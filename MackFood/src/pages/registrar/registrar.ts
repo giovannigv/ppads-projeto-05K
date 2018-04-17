@@ -26,7 +26,6 @@ export class RegistrarPage {
     this.userCad = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
       nome: ['', [Validators.required]],
-      username: ['', [Validators.required]],
       password: ['', [Validators.required]]
     });
   }
