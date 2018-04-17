@@ -21,5 +21,8 @@ export class RegistraLanchonetePage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad RegistraLanchonetePage');
   }
+  signLanchonete(){
+    
+  }
 
 }

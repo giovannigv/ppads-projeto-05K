@@ -45,6 +45,7 @@ export class RegistrarPage {
       }
     )
   }
+  //TODO: Colocar um loading quando estiver mandando a informaçao 
 
   signLanchonete(){
     //this.navCtrl.push(RegistraLanchonetePage);
