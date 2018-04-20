@@ -9,12 +9,9 @@
 
     <ion-card-content>
       <ion-list no-lines>
-
-        <h1>Agora sim.....</h1>
-
-        <!-- <form (ngSubmit)="onSubmit()" [formGroup]="userCad">
+        <form (ngSubmit)="onSubmit()" [formGroup]="userCad">
           <ion-item>
-            <ion-label floating>Nome</ion-label>
+            <ion-label floating>Nome da Empresa</ion-label>
             <ion-input formControlName="nome" type="text" name="nome"></ion-input>
           </ion-item>
           <ion-item>
@@ -25,13 +22,8 @@
             <ion-label floating>Senha</ion-label>
             <ion-input formControlName="password" type="password" name="senha"></ion-input>
           </ion-item>
-          <button ion-button block [disabled]="userCad.invalid || userCad.untouched">Cadastrar</button>
-        </form>
-        <div style="padding:5px 0px 0px 0px;">
-          <h3 ion-text>Gostaria de cadastrar</h3>
-          <h3 ion-text>sua Lanchonete?</h3>
-        </div>
-        <button class="botao" ion-button block (click)="signLanchonete()">Clique Aqui!</button> -->
+          <button ion-button block [disabled]="userCad.invalid || userCad.untouched">Cadastrar Empresa</button>
+        </form>        
       </ion-list>
     </ion-card-content>
   </ion-card>
