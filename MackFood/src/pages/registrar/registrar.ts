@@ -37,7 +37,7 @@ export class RegistrarPage {
       res => {
         console.log(res);
         setTimeout(() => this.presentAlert('SUCESSO :)', 'Cadastrado com Sucesso!!!'), 100);
-        this.navCtrl.setRoot(HomePage)
+        this.navCtrl.setRoot(HomePage);
       },
       err => {
         console.log(err);
@@ -45,11 +45,10 @@ export class RegistrarPage {
       }
     )
   }
-  //TODO: Colocar um loading quando estiver mandando a informaçao 
+  //TODO: Colocar um loading quando estiver mandando a informaçao
 
   signLanchonete(){
-    //this.navCtrl.push(RegistraLanchonetePage);
-    this.navCtrl.setRoot(RegistraLanchonetePage);
+    this.navCtrl.push(RegistraLanchonetePage);
   }
 
   presentAlert(title: string, errorMsg: string) {
