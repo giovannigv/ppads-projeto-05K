@@ -6,7 +6,6 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MenuPage } from '../menu/menu';
 import { RegistrarPage } from '../registrar/registrar';
 import { ConsultaProvider } from './../../providers/consulta/consulta';
-import { MenuUsuarioPage } from '../menu-usuario/menu-usuario';
 
 @Component({
   selector: 'page-home',
@@ -34,7 +33,7 @@ export class HomePage {
     this.consultaProvider.validaUsuario(this.user.value).subscribe(
       res => {
         console.log(res);
-        this.navCtrl.setRoot(MenuUsuarioPage);
+        this.navCtrl.setRoot(MenuPage);
       },
       err => {
         console.log(err);

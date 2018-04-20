@@ -12,8 +12,6 @@ import { RegistrarPage } from '../pages/registrar/registrar';
 import { ConsultaProvider } from '../providers/consulta/consulta';
 import { CadastroProvider } from '../providers/cadastro/cadastro';
 import { RegistraLanchonetePage } from '../pages/registra-lanchonete/registra-lanchonete';
-import { MenuUsuarioPage } from '../pages/menu-usuario/menu-usuario';
-import { ConfiguracaoPage } from '../pages/configuracao/configuracao';
 
 @NgModule({
   declarations: [
@@ -21,10 +19,7 @@ import { ConfiguracaoPage } from '../pages/configuracao/configuracao';
     HomePage,
     MenuPage,
     RegistrarPage,
-    RegistraLanchonetePage,
-    MenuUsuarioPage,
-    ConfiguracaoPage
-    
+    RegistraLanchonetePage
   ],
   imports: [
     BrowserModule,
@@ -37,9 +32,7 @@ import { ConfiguracaoPage } from '../pages/configuracao/configuracao';
     HomePage,
     MenuPage,
     RegistrarPage,
-    RegistraLanchonetePage,
-    MenuUsuarioPage,
-    ConfiguracaoPage
+    RegistraLanchonetePage
   ],
   providers: [
     HttpModule,
