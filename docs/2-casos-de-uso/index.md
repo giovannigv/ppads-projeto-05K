@@ -2,206 +2,138 @@
 
 ## 1. Diagrama de casos de uso
 
-**Instruções do professor**: Insira abaixo o diagrama com os casos de uso do seu sistema. A imagem abaixo é somente um exemplo.
-
-![Caso de Uso](Use Case MackFood.jpg)
-
-> **Comentário do professor:** Considerar a possibilidade de adicionar a funcionalidade de busca de um mesmo tipo de produto em diversos estabelecimentos.
-
-> **Comentário do professor:** Avaliar se realmente existe esta relação de herança ("extends") entre os casos de uso.
+![Caso de Uso](use-case-mack-food.png)
 
 ## 2. Especificação dos casos de uso
 
 **Instruções do professor**: Para cada caso de uso, criar as tabelas com a especificação do caso de uso. Siga o exemplo dado abaixo:
 
-<<<<<<< HEAD
-### 2.1. Caso de uso **Realiza Cadastro Cliente**
-=======
 ### 2.1. Caso de uso **Manter Cadastro Cliente**
->>>>>>> 091ad9f1ee327d1b7fbd63aecdd5bd8ce7b07a8a
 
-| Campo          | Informação        |
+| Campo | Informação |
 |---|---|
-| Identificador: | UC-01              |
-| Nome:          | Cadastra informações |
+| Identificador: | UC-01   |
+| Nome:          | Manter cadastro cliente |
 | Atores:        | Cliente |
-| Sumário:       | Cadastra informações |
+| Sumário:       | Cadastra informações do cliente |
 
 | Fluxo Principal |
 |---|
-| 1) Cliente Cadastra suas informações no sistema. |
-| 2) Sistema cadastra cliente no banco de dados. |
+| 1) Cliente cadastra suas informações no sistema |
+| 2) Sistema cadastra cliente no banco de dados |
 
-| Fluxo Alternativo (UC-01a): O Cliente não cadastrou todas as informações. |
+| Fluxo Alternativo (UC-01a): Cliente não cadastrou todas as informações |
 |---|
-| 1) O sistema identifica o que está faltando informações e mostra uma mensagem de erro. |
-| 2) Volta ao passo (1) do fluxo principal. |
+| 1) Sistema identifica que há campos não cadastrados e não habilita o botão de envio |
 
-| Fluxo Alternativo (UC-01b): O Cliente cadastrou informações não validas. |
-|---|
-| 1) O sistema percebe que alguma informação está errada e mostra uma mensagem de erro. |
-| 2) Volta ao passo (1) do fluxo principal. |
-
-<<<<<<< HEAD
-### 2.2. Caso de uso **Realiza Cadastro Estabelecimento**
-=======
 ### 2.2. Caso de uso **Manter Cadastro Estabelecimento**
->>>>>>> 091ad9f1ee327d1b7fbd63aecdd5bd8ce7b07a8a
 
-|Campo | Informação | 
+| Campo | Informação | 
 |---|---|
-| Identificador :| UC-02                   |
-| Nome :         | Cadastra Estabelecimento|
-| Atores:        | Estabelecimento         |
-| Sumario:       | Cadastra Informações    |
+| Identificador: | UC-02           |
+| Nome :         | Manter cadastro estabelecimento |
+| Atores:        | Estabelecimento |
+| Sumário:       | Cadastra informações do estabelecimento |
 
 | Fluxo Principal |
-| --- |
-| 1) O Funcionário cadastra os dados do estabelecimento no sistema |
+|---|
+| 1) Funcionário cadastra os dados do estabelecimento no sistema |
 | 2) Sistema cadastra as informações fornecidas no banco de dados |
 
-| Fluxo Alternativo (UC-02a): o Funcionário não cadastrou todas as informações |
+| Fluxo Alternativo (UC-02a): Funcionário não cadastrou todas as informações |
 |---|
-| 1) O sistema identifica que há campos não cadastrados e não habilita o botão de envio|
-<<<<<<< HEAD
-
-| Fluxo Alternativo (UC-02b): O funcionário cadastrou informações não validas |
-|---|
-| 1) O sistema percebe que alguma informação está errada e mostra uma mensagem de erro. |
-| 2) Volta ao passo (1) do fluxo principal. |
-
-### 2.3. Caso de uso **Realiza Cadastro de Menu**
-
-| Campo          | Informação        |
-|---|---|
-| Identificador: | UC-03          |
-| Nome:          | Cadastra Menu |
-| Atores:        | Estabelecimento |
-| Sumário:       | Cadastra Informações de Menu |
-
-| Fluxo Principal |
-|---|
-| 1) Funcionário escreve todo o menu em um campo do tipo Textbox. |
-| 2) Funcionário clica em salvar. |
-| 3) Sistema salva o conteúdo do campo no banco de dados. |
-
-| Fluxo Alternativo (UC-03a): O funcionário não preencheu o campo |
-|---|
-| 1) O sistema identifica que o campo não foi preenchido e não habilita o botão de envio. |
-
-| Fluxo Alternativo (UC-03b): O funcionário opta por carregar o campo com um arquivo .txt |
-|---|
-| 1) O funcionário clica no botão para upload de um arquivo em de texto (anything.txt). |
-| 2) O sistema carrega todo o conteúdo do arquivo de texto no campo de menu. |
-| 2) O sistema salva o arquivo no banco de dados. |
-
-| Fluxo Alternativo (UC-03c): O funcionário opta por enviar o menu em PDF |
-|---|
-| 1) O funcionário clica no botão para upload de um arquivo em PDF. |
-| 2) O sistema salva o arquivo no banco de dados. |
-
-### 2.4. Caso de uso **Realiza Pedido**
-
-| Campo          | Informação        |
-|---|---|
-| Identificador: | UC-04          |
-| Nome:          | Pedido |
-| Atores:        | Cliente |
-| Sumário:       | Realizar Pedido |
-
-| Fluxo Principal |
-|---|
-| 1) Cliente escolhe um estabelecimento. |
-| 2) Cliente escolhe comida e quantidade. |
-| 3) Cliente confirma o pedido. |
-| 4) Sistema cadastra o pedido. |
-
-> **Comentário do professor:** No caso de uso "Realiza pedido": não há a possibilidade de cada pedido ser formado por diferentes itens?
-
-| Fluxo Alternativo (UC-04a): O cliente desiste da compra|
-|---|
-| 1) O cliente clica para cancelar. |
-| 2) Volta ao passo (1) do fluxo principal.  |
-
-| Fluxo Alternativo (UC-04b): O cliente não paga pelo pedido |
-=======
-
-| Fluxo Alternativo (UC-02b): O funcionário cadastrou informações não validas |
-|---|
-| 1) O sistema percebe que alguma informação está errada e mostra uma mensagem de erro. |
-| 2) Volta ao passo (1) do fluxo principal. |
+| 1) Sistema identifica que há campos não cadastrados e não habilita o botão de envio |
 
 ### 2.3. Caso de uso **Manter Cadastro Menu**
 
-| Campo          | Informação        |
+| Campo | Informação |
 |---|---|
-| Identificador: | UC-03          |
-| Nome:          | Cadastra Menu |
+| Identificador: | UC-03           |
+| Nome:          | Manter Cadastro Menu |
 | Atores:        | Estabelecimento |
-| Sumário:       | Cadastra Informações de Menu |
+| Sumário:       | Cadastra informações do Menu/Cardápio |
 
 | Fluxo Principal |
 |---|
-| 1) Funcionário escreve todo o menu em um campo do tipo Textbox. |
-| 2) Funcionário clica em salvar. |
-| 3) Sistema salva o conteúdo do campo no banco de dados. |
+| 1) Funcionário insere informações sobre o menu e clica em salvar |
+| 2) Sistema salva o conteúdo no banco de dados |
 
-| Fluxo Alternativo (UC-03a): O funcionário não preencheu o campo |
+| Fluxo Alternativo (UC-03a): Funcionário não preencheu o campo |
 |---|
-| 1) O sistema identifica que o campo não foi preenchido e não habilita o botão de envio. |
+| 1) Sistema identifica que o campo não foi preenchido e não habilita o botão de envio |
 
-| Fluxo Alternativo (UC-03b): O funcionário opta por carregar o campo com um arquivo .txt |
+| Fluxo Alternativo (UC-03b): Funcionário seleciona opção de carregar um arquivo .txt ou .pdf |
 |---|
-| 1) O funcionário clica no botão para upload de um arquivo em de texto (anything.txt). |
-| 2) O sistema carrega todo o conteúdo do arquivo de texto no campo de menu. |
-| 2) O sistema salva o arquivo no banco de dados. |
-
-| Fluxo Alternativo (UC-03c): O funcionário opta por enviar o menu em PDF |
-|---|
-| 1) O funcionário clica no botão para upload de um arquivo em PDF. |
-| 2) O sistema salva o arquivo no banco de dados. |
+| 1) Funcionário clica no botão de upload e seleciona o arquivo e confirma |
+| 2) Sistema carrega todo o conteúdo do arquivo e salva no banco de dados |
 
 ### 2.4. Caso de uso **Manter Pedido**
 
-| Campo          | Informação        |
+| Campo | Informação |
 |---|---|
-| Identificador: | UC-04          |
-| Nome:          | Pedido |
+| Identificador: | UC-04   |
+| Nome:          | Realizar pedido |
 | Atores:        | Cliente |
-| Sumário:       | Realizar Pedido |
+| Sumário:       | Cliente adiciona ou remove produtos no carrinho |
 
 | Fluxo Principal |
 |---|
-| 1) Cliente escolhe um estabelecimento. |
-| 2) Cliente escolhe itens a serem pedidos e quantidade. |
-| 3) Cliente visualiza pedido. |
-| 4) Cliente confirma o pedido. |
-| 5) Sistema cadastra o pedido. |
-| 6) Sistema cria caso de uso de pagamento. |
+| 1) Cliente escolhe um estabelecimento |
+| 2) Sistema mostra opções de comida do estabelecimento |
+| 3) Cliente escolhe comida e quantidade e confirma |
+| 4) Sistema cadastra o pedido no carrinho e direciona para carrinho |
 
-| Fluxo Alternativo (UC-04a): O cliente não paga pelo pedido |
->>>>>>> 091ad9f1ee327d1b7fbd63aecdd5bd8ce7b07a8a
+| Fluxo Alternativo (UC-04a): Cliente exclui comida do carrinho |
 |---|
-| 1) O cliente no momento do pagamento, cancela a compra |
-| 2) O sistema não confirma a compra.|
-| 3) Volta ao passo (1) do fluxo principal.  |
-<<<<<<< HEAD
-=======
-** é aqui? **
+| 1) Cliente seleciona a opção de excluir comida do carrinho |
+| 2) Sistema pede confirmação |
+| 3) Cliente confirma |
+| 4) Sistema salva alteração e volta para o carrinho |
 
-| Fluxo Alternativo (UC-04b): O cliente exclui itens da compra|
+| Fluxo Alternativo (UC-04b): Cliente altera quantidade de determinada comida |
 |---|
-| 1) Cliente seleciona os itens a serem excluídos |
-| 2) Cliente confirma a exclusão dos itens |
-| 3) Volta ao passo (3) do fluxo principal |
+| 1) Cliente seleciona aumentar ou diminuir quantidade |
+| 2) Sistema salva alteração |
 
-| Fluxo Alternativo (UC-04b): O cliente escolhe mais itens para compra|
+| Fluxo Alternativo (UC-04c): Cliente decide continuar comprando |
 |---|
-| 1) Cliente visualiza os pedidos |
-| 2) Cliente confirma desejo de acrescentar mais itens ao pedido |
-| 3) Volta ao passo (2) do fluxo principal |
+| 1) Cliente seleciona a opção adicionar mais itens |
+| 2) Sistema volta para o fluxo principal (UC-04) |
 
+| Fluxo Alternativo (UC-04d): Cliente finaliza pedido |
+|---|
+| 1) Cliente seleciona a opção finalizar pedido |
+| 2) Sistema direciona para caso de uso 2.5. Realizar Pagamento |
 
->>>>>>> 091ad9f1ee327d1b7fbd63aecdd5bd8ce7b07a8a
+### 2.5. Caso de uso **Realizar Pagamento**
 
-**Instruções do professor**: As tabelas acima mostram um exemplo de especificação de **um único caso de uso**. Lembre-se de especificar cada um dos casos de uso.
+| Campo | Informação |
+|---|---|
+| Identificador: | UC-06   |
+| Nome:          | Realizar pagamento |
+| Atores:        | Cliente |
+| Sumário:       | Fazer pagamento |
+
+| Fluxo Principal |
+|---|
+| 1) Cliente seleciona forma de pagamento. |
+| 2) Sistema direciona cliente para API que controla o pagamento (PagSeguro). |
+
+### 2.6. Caso de uso **Verificar Pedido**
+
+| Campo | Informação |
+|---|---|
+| Identificador: | UC-05           |
+| Nome:          | Verificar Pedido |
+| Atores:        | Estabelecimento |
+| Sumário:       | Verificar Pedido |
+
+| Fluxo Principal |
+|---|
+| 1) Estabelecimento seleciona vizualizar pedidos em aberto |
+| 2) Sistema mostra todos pedidos em aberto |
+
+| Fluxo Alternativo (UC-05a): Funcionario finaliza pedido |
+|---|
+| 1) Estabelecimento seleciona finalizar pedido |
+| 2) Sistema fecha pedido, manda mensagem para cliente e atualiza o sistema |
