@@ -11,7 +11,7 @@
       <ion-list no-lines>
         <form (ngSubmit)="onSubmit()" [formGroup]="userCad">
           <ion-item>
-            <ion-label floating>Nome da Empresa</ion-label>
+            <ion-label floating>Nome do Estabelecimento</ion-label>
             <ion-input formControlName="nome" type="text" name="nome"></ion-input>
           </ion-item>
           <ion-item>
@@ -23,7 +23,7 @@
             <ion-input formControlName="password" type="password" name="senha"></ion-input>
           </ion-item>
           <button ion-button block [disabled]="userCad.invalid || userCad.untouched">Cadastrar Empresa</button>
-        </form>        
+        </form>
       </ion-list>
     </ion-card-content>
   </ion-card>
