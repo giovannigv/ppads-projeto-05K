@@ -25,6 +25,7 @@ export class RegistrarPage {
 
   ngOnInit() {
     this.userCad = this.fb.group({
+      type: ['user'],
       email: ['', [Validators.required, Validators.email]],
       nome: ['', [Validators.required]],
       password: ['', [Validators.required]]

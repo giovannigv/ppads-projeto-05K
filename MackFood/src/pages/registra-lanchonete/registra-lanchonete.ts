@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+
 import { CadastroProvider } from '../../providers/cadastro/cadastro';
 import { HomePage } from '../home/home';
 
@@ -22,6 +23,7 @@ export class RegistraLanchonetePage {
 
   ngOnInit() {
     this.userCad = this.fb.group({
+      type: ['comer'],
       email: ['', [Validators.required, Validators.email]],
       nome: ['', [Validators.required]],
       password: ['', [Validators.required]]
