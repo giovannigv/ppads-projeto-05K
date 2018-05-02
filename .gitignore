@@ -36,3 +36,5 @@ UserInterfaceState.xcuserstate
 *.pyc
 venv
 .venv
+
+config.py
