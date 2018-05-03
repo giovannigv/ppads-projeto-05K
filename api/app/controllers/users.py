@@ -20,3 +20,16 @@ def create_user():
     db.session.add(new_user)
     db.session.commit()
     return jsonify({'mensagem' : 'Novo usuário criado!'})
+
+@app.route('/api/users', methods=['GET'])
+def get_all_users():
+    users = User.query.all()
+    output = []
+    for user in users:
+        user_data = {}
+        user_data['public_id'] = user.public_id
+        user_data['nome'] = user.nome
+        user_data['email'] = user.email
+        user_data['admin'] = user.admin
+        output.append(user_data)
+    return jsonify({'users' : output})
