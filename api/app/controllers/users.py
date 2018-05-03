@@ -33,3 +33,15 @@ def get_all_users():
         user_data['admin'] = user.admin
         output.append(user_data)
     return jsonify({'users' : output})
+
+@app.route('/api/users/<public_id>', methods=['GET'])
+def get_one_user(public_id):
+    user = User.query.filter_by(public_id=public_id).first()
+    if not user:
+        return jsonify({'mensagem' : 'Nenhum usuário encontrado!'})
+    user_data = {}
+    user_data['public_id'] = user.public_id
+    user_data['nome'] = user.nome
+    user_data['email'] = user.email
+    user_data['admin'] = user.admin
+    return jsonify({'user' : user_data})
