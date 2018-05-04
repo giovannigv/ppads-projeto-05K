@@ -34,7 +34,7 @@ export class RegistrarPage {
 
   onSubmit() {
     console.log(this.userCad.value);
-    this.cadastroProvider.cadastraUser(this.userCad.value).subscribe(
+    this.cadastroProvider.cadastraUser(this.userCad.value, '/api/users').subscribe(
       res => {
         console.log(res);
         setTimeout(() => this.presentAlert('SUCESSO :)', 'Cadastrado com Sucesso!!!'), 100);

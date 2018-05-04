@@ -13,22 +13,21 @@ export class CadastroProvider {
 
   private headers: Headers;
   private options: RequestOptions;
+  private api: string;
 
   constructor(public http: Http) {
     console.log('Hello CadastroProvider Provider');
     this.headers = new Headers({ 'Content-Type': 'application/json' });
     this.options = new RequestOptions({ headers: this.headers });
+    this.api = 'https://api-mackfood.herokuapp.com';
   }
 
-  cadastraUser(userCadData) {
+  cadastraUser(userCadData, opc) {
     console.log(userCadData);
-
-    let html = `https://api-mackfood.herokuapp.com/api/users`;
-
     console.log(this.options);
 
     return this.http
-      .post(html, userCadData, this.options)
+      .post(`${this.api}${opc}`, userCadData, this.options)
       .map(this.extractData);
 
   }

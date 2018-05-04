@@ -12,7 +12,7 @@ import { HomePage } from '../home/home';
 })
 export class RegistraLanchonetePage {
 
-  private userCad: FormGroup;
+  private estabCad: FormGroup;
 
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
@@ -22,8 +22,8 @@ export class RegistraLanchonetePage {
   }
 
   ngOnInit() {
-    this.userCad = this.fb.group({
-      type: ['comer'],
+    this.estabCad = this.fb.group({
+      type: ['estabel'],
       email: ['', [Validators.required, Validators.email]],
       nome: ['', [Validators.required]],
       password: ['', [Validators.required]]
@@ -31,8 +31,8 @@ export class RegistraLanchonetePage {
   }
 
   onSubmit() {
-    console.log(this.userCad.value);
-    this.cadastroProvider.cadastraUser(this.userCad.value).subscribe(
+    console.log(this.estabCad.value);
+    this.cadastroProvider.cadastraUser(this.estabCad.value, '').subscribe(
       res => {
         console.log(res);
         setTimeout(() => this.presentAlert('SUCESSO :)', 'Cadastrado com Sucesso!!!'), 100);
@@ -42,7 +42,7 @@ export class RegistraLanchonetePage {
         console.log(err);
         this.presentAlert('Ops... Temos um problema', err._body);
       }
-    )
+    );
   }
   //TODO: Colocar um loading quando estiver mandando a informaçao
 
