@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, LoadingController } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
@@ -16,11 +16,17 @@ import { MenuLanchonetePage } from '../menu-lanchonete/menu-lanchonete';
 export class HomePage {
 
   private user: FormGroup;
+  private loading: any;
 
   constructor(public navCtrl: NavController,
     private consultaProvider: ConsultaProvider,
     private fb: FormBuilder,
-    private alertCtrl: AlertController) { }
+    private alertCtrl: AlertController,
+    public loadingCtrl: LoadingController
+  ) {
+    this.loading = this.loadingCtrl.create({
+      content: 'Cadastrando...'
+    }); }
 
   ngOnInit() {
     this.user = this.fb.group({
@@ -31,13 +37,15 @@ export class HomePage {
 
   signInUser() {
     console.log(this.user.value);
-
+    this.loading.present();
     this.consultaProvider.validaUsuario(this.user.value).subscribe(
       res => {
+        this.loading.dismiss();
         console.log(res);
         this.navCtrl.setRoot(MenuUsuarioPage);
       },
       err => {
+        this.loading.dismiss();
         console.log(err);
         this.presentAlert(err._body);
       }
@@ -45,8 +53,8 @@ export class HomePage {
   }
 
   signUpUser() {
-    //this.navCtrl.push(RegistrarPage);
-    this.navCtrl.setRoot(MenuLanchonetePage);
+    this.navCtrl.push(RegistrarPage);
+    //this.navCtrl.setRoot(MenuLanchonetePage);
   }
 
   presentAlert(errorMsg: string) {

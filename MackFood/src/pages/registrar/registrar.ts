@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AlertController } from 'ionic-angular';
+import { AlertController, LoadingController } from 'ionic-angular';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
@@ -15,12 +15,19 @@ import { RegistraLanchonetePage } from '../registra-lanchonete/registra-lanchone
 export class RegistrarPage {
 
   private userCad: FormGroup;
+  private loading: any;
 
-  constructor(public navCtrl: NavController,
+  constructor(
+    public navCtrl: NavController,
     public navParams: NavParams,
     private cadastroProvider: CadastroProvider,
     private fb: FormBuilder,
-    private alertCtrl: AlertController) {
+    private alertCtrl: AlertController,
+    public loadingCtrl: LoadingController
+  ) {
+    this.loading = this.loadingCtrl.create({
+      content: 'Cadastrando...'
+    });
   }
 
   ngOnInit() {
@@ -34,13 +41,16 @@ export class RegistrarPage {
 
   onSubmit() {
     console.log(this.userCad.value);
+    this.loading.present();
     this.cadastroProvider.cadastraUser(this.userCad.value).subscribe(
       res => {
+        this.loading.dismiss();
         console.log(res);
         setTimeout(() => this.presentAlert('SUCESSO :)', 'Cadastrado com Sucesso!!!'), 100);
         this.navCtrl.setRoot(HomePage);
       },
       err => {
+        this.loading.dismiss();
         console.log(err);
         this.presentAlert('Ops... Temos um problema', err._body);
       }
@@ -48,7 +58,7 @@ export class RegistrarPage {
   }
   //TODO: Colocar um loading quando estiver mandando a informaçao
 
-  signLanchonete(){
+  signLanchonete() {
     this.navCtrl.push(RegistraLanchonetePage);
   }
 

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController, LoadingController } from 'ionic-angular';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 import { CadastroProvider } from '../../providers/cadastro/cadastro';
@@ -13,13 +13,18 @@ import { HomePage } from '../home/home';
 export class RegistraLanchonetePage {
 
   private userCad: FormGroup;
+  private loading: any;
 
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
     private cadastroProvider: CadastroProvider,
     private fb: FormBuilder,
-    private alertCtrl: AlertController) {
-  }
+    private alertCtrl: AlertController,
+    public loadingCtrl: LoadingController
+  ) {
+    this.loading = this.loadingCtrl.create({
+      content: 'Cadastrando...'
+    }); }
 
   ngOnInit() {
     this.userCad = this.fb.group({
@@ -32,13 +37,16 @@ export class RegistraLanchonetePage {
 
   onSubmit() {
     console.log(this.userCad.value);
+    this.loading.present();
     this.cadastroProvider.cadastraUser(this.userCad.value).subscribe(
       res => {
+        this.loading.dismiss();
         console.log(res);
         setTimeout(() => this.presentAlert('SUCESSO :)', 'Cadastrado com Sucesso!!!'), 100);
         this.navCtrl.setRoot(HomePage);
       },
       err => {
+        this.loading.dismiss();
         console.log(err);
         this.presentAlert('Ops... Temos um problema', err._body);
       }
