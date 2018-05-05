@@ -54,8 +54,8 @@ export class HomePage {
   }
 
   signUpUser() {
-    this.navCtrl.push(RegistrarPage);
-    //this.navCtrl.setRoot(MenuLanchonetePage);
+    //this.navCtrl.push(RegistrarPage);
+    this.navCtrl.setRoot(MenuUsuarioPage);
   }
 
   presentAlert(errorMsg: string) {

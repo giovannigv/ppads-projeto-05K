@@ -36,7 +36,7 @@ export class NovoProdutoPage {
 
   onSubmit(){
     console.log(this.novProd.value);
-    this.cadastroProvider.cadastraUser(this.novProd.value).subscribe(
+    this.cadastroProvider.cadastraUser(this.novProd.value,'').subscribe(
       res => {
         console.log(res);
         setTimeout(() => this.presentAlert('Novo Produto', this.novProd.value.nome+' = '+this.novProd.value.password ), 100);
