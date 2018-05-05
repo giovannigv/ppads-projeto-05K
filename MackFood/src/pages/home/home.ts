@@ -1,3 +1,4 @@
+import { MenuLanchonetePage } from './../menu-lanchonete/menu-lanchonete';
 import { Component } from '@angular/core';
 import { NavController, LoadingController } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
@@ -68,6 +69,10 @@ export class HomePage {
       }]
     });
     alert.present();
+  }
+
+  goku() {
+    this.navCtrl.push(MenuLanchonetePage);
   }
 
 }

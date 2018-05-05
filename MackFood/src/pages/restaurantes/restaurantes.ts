@@ -15,8 +15,8 @@ import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angul
 })
 export class RestaurantesPage {
 
-  constructor(public navCtrl: NavController, 
-              public navParams: NavParams, 
+  constructor(public navCtrl: NavController,
+              public navParams: NavParams,
               public menuCtrl: MenuController) {
   }
 
@@ -26,5 +26,8 @@ export class RestaurantesPage {
 
   doClick() {
     this.menuCtrl.open();
+  }
+  teste() {
+    // this.navCtrl.setRoot();
   }
 }
