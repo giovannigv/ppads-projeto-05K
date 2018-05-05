@@ -1,0 +1,37 @@
+[{
+	"ID": "1",
+	"Nome": "Acre"
+  "segmento": ""
+  "cardapio": [{
+    "ID": "1"
+    "produto": "nome_produto"
+    "descricao": ""
+    "valor": ""
+  },
+  {
+    "ID": "2"
+    "produto": "nome_produto"
+    "descricao": ""
+    "valor": ""
+  },
+  ]
+},
+{
+	"ID": "1",
+	"Nome": "Acre"
+  "segmento": ""
+  "cardapio": [{
+    "ID": "1"
+    "produto": "nome_produto"
+    "descricao": ""
+    "valor": ""
+  },
+  {
+    "ID": "2"
+    "produto": "nome_produto"
+    "descricao": ""
+    "valor": ""
+  },
+  ]
+},
+]
