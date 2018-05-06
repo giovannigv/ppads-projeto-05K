@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angular';
+import { CardapioPage } from '../cardapio/cardapio';
 
 /**
  * Generated class for the RestaurantesPage page.
@@ -28,6 +29,7 @@ export class RestaurantesPage {
     this.menuCtrl.open();
   }
   teste() {
-    // this.navCtrl.setRoot();
+    console.log("foi?");
+    this.navCtrl.push(CardapioPage);
   }
 }
