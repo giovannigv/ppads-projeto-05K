@@ -1,13 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angular';
-import { CardapioPage } from '../cardapio/cardapio';
 
-/**
- * Generated class for the RestaurantesPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { CardapioPage } from '../cardapio/cardapio';
+import { ConsultaProvider } from './../../providers/consulta/consulta';
+import { DataProvider } from './../../providers/data/data';
 
 @IonicPage()
 @Component({
@@ -16,20 +12,34 @@ import { CardapioPage } from '../cardapio/cardapio';
 })
 export class RestaurantesPage {
 
-  constructor(public navCtrl: NavController,
-              public navParams: NavParams,
-              public menuCtrl: MenuController) {
-  }
+  private t: any;
+  private restaurants = [];
+
+  constructor(
+    private consultaProvider: ConsultaProvider,
+    private dataProvider: DataProvider,
+    private menuCtrl: MenuController,
+    private navCtrl: NavController,
+    private navParams: NavParams
+  ) { }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad RestaurantesPage');
+    this.t = this.dataProvider.getToken();
+    this.consultaProvider.consultaAnything('restaurantes', this.t.token).subscribe(
+      res => {
+        this.restaurants = res.restaurants;
+        console.log(this.restaurants);
+      }
+    );
   }
 
   doClick() {
     this.menuCtrl.open();
   }
-  teste() {
-    console.log("foi?");
+
+  teste(obj) {
+    this.dataProvider.setRestSelc(obj);
     this.navCtrl.push(CardapioPage);
   }
 }

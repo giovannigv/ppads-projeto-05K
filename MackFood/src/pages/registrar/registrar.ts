@@ -42,7 +42,7 @@ export class RegistrarPage {
   onSubmit() {
     console.log(this.userCad.value);
     this.loading.present();
-    this.cadastroProvider.cadastraUser(this.userCad.value, '/api/users').subscribe(
+    this.cadastroProvider.cadastraUser(this.userCad.value, 'users').subscribe(
       res => {
         this.loading.dismiss();
         console.log(res);

@@ -1,13 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { NovoProdutoPage } from '../novo-produto/novo-produto';
 
-/**
- * Generated class for the ProdutosPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { NovoProdutoPage } from '../novo-produto/novo-produto';
 
 @IonicPage()
 @Component({

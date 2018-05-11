@@ -32,15 +32,17 @@ export class RegistraLanchonetePage {
     this.estabCad = this.fb.group({
       type: ['estabel'],
       email: ['', [Validators.required, Validators.email]],
+      imagem_url: ['', [Validators.required]],
       nome: ['', [Validators.required]],
-      password: ['', [Validators.required]]
+      password: ['', [Validators.required]],
+      segmento: ['', [Validators.required]]
     });
   }
 
   onSubmit() {
     console.log(this.estabCad.value);
     this.loading.present();
-    this.cadastroProvider.cadastraUser(this.estabCad.value, '').subscribe(
+    this.cadastroProvider.cadastraUser(this.estabCad.value, 'restaurantes').subscribe(
       res => {
         this.loading.dismiss();
         console.log(res);
