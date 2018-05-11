@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angular';
+import { CardapioPage } from '../cardapio/cardapio';
 
 /**
  * Generated class for the RestaurantesPage page.
@@ -15,8 +16,8 @@ import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angul
 })
 export class RestaurantesPage {
 
-  constructor(public navCtrl: NavController, 
-              public navParams: NavParams, 
+  constructor(public navCtrl: NavController,
+              public navParams: NavParams,
               public menuCtrl: MenuController) {
   }
 
@@ -26,5 +27,9 @@ export class RestaurantesPage {
 
   doClick() {
     this.menuCtrl.open();
+  }
+  teste() {
+    console.log("foi?");
+    this.navCtrl.push(CardapioPage);
   }
 }

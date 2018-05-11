@@ -70,4 +70,8 @@ export class HomePage {
     alert.present();
   }
 
+  goku() {
+    this.navCtrl.push(MenuLanchonetePage);
+  }
+
 }

@@ -19,6 +19,7 @@ import { MenuLanchonetePage } from '../pages/menu-lanchonete/menu-lanchonete';
 import { ProdutosPage } from '../pages/produtos/produtos';
 import { SolicitacoesPage } from '../pages/solicitacoes/solicitacoes';
 import { NovoProdutoPage } from '../pages/novo-produto/novo-produto';
+import { CardapioPage } from '../pages/cardapio/cardapio';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { NovoProdutoPage } from '../pages/novo-produto/novo-produto';
     RestaurantesPage,
     ProdutosPage,
     SolicitacoesPage,
-    NovoProdutoPage
+    NovoProdutoPage,
+    CardapioPage
   ],
   imports: [
     BrowserModule,
@@ -53,7 +55,8 @@ import { NovoProdutoPage } from '../pages/novo-produto/novo-produto';
     RestaurantesPage,
     ProdutosPage,
     SolicitacoesPage,
-    NovoProdutoPage
+    NovoProdutoPage,
+    CardapioPage
   ],
   providers: [
     HttpModule,

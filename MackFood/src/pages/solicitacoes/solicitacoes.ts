@@ -22,4 +22,8 @@ export class SolicitacoesPage {
     console.log('ionViewDidLoad SolicitacoesPage');
   }
 
+  teste() {
+    console.log("foi?");
+    this.navCtrl.push(CardapioPage);
+  }
 }
