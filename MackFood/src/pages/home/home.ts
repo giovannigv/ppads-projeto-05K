@@ -3,11 +3,13 @@ import { NavController, LoadingController } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
-import { MenuPage } from '../menu/menu';
-import { RegistrarPage } from '../registrar/registrar';
 import { ConsultaProvider } from './../../providers/consulta/consulta';
-import { MenuUsuarioPage } from '../menu-usuario/menu-usuario';
+import { DataProvider } from './../../providers/data/data';
+import { identifierModuleUrl } from '@angular/compiler';
 import { MenuLanchonetePage } from '../menu-lanchonete/menu-lanchonete';
+import { MenuPage } from '../menu/menu';
+import { MenuUsuarioPage } from '../menu-usuario/menu-usuario';
+import { RegistrarPage } from '../registrar/registrar';
 
 @Component({
   selector: 'page-home',
@@ -18,14 +20,16 @@ export class HomePage {
   private user: FormGroup;
   private loading: any;
 
-  constructor(public navCtrl: NavController,
-    private consultaProvider: ConsultaProvider,
-    private fb: FormBuilder,
+  constructor(
     private alertCtrl: AlertController,
-    public loadingCtrl: LoadingController
+    private consultaProvider: ConsultaProvider,
+    private dataProvider: DataProvider,
+    private fb: FormBuilder,
+    private loadingCtrl: LoadingController,
+    private navCtrl: NavController
   ) {
     this.loading = this.loadingCtrl.create({
-      content: 'Cadastrando...'
+      content: 'Acessando...'
     });
   }
 
@@ -39,11 +43,17 @@ export class HomePage {
   signInUser() {
     console.log(this.user.value);
     this.loading.present();
-    this.consultaProvider.validaUsuario(this.user.value).subscribe(
+    this.consultaProvider.validaUsuario(this.user.value, 'token').subscribe(
       res => {
         this.loading.dismiss();
-        console.log(res);
-        this.navCtrl.setRoot(MenuUsuarioPage);
+        this.dataProvider.setToken(res);
+        if (res.type === 'cliente') {
+          this.navCtrl.setRoot(MenuUsuarioPage);
+        } else if (res.type === 'restaurante') {
+          this.navCtrl.setRoot(MenuLanchonetePage);
+        } else if (res.type === 'admin') {
+          console.log('Esse é Admin...');
+        }
       },
       err => {
         this.loading.dismiss();
@@ -54,8 +64,8 @@ export class HomePage {
   }
 
   signUpUser() {
-    //this.navCtrl.push(RegistrarPage);
-    this.navCtrl.setRoot(MenuUsuarioPage);
+    this.navCtrl.push(RegistrarPage);
+    // this.navCtrl.setRoot(MenuUsuarioPage);
   }
 
   presentAlert(errorMsg: string) {

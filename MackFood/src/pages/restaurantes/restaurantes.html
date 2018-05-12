@@ -1,9 +1,3 @@
-<!--
-  Generated template for the RestaurantesPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
   <ion-navbar>
     <ion-buttons start>
@@ -19,24 +13,15 @@
 </ion-header>
 
 <ion-content padding class="card-background-page">
-<!-- Ngfor -->
-  <ion-card (click)="teste()" >
-      <ion-item>
-          <ion-avatar item-start>
-            <img src="https://imagesapt.apontador-assets.com/fit-in/320x240/a3e003bdd1ae4a99a336f4ef34f95687/bobs--drive-taquara.png">
-          </ion-avatar>
-          <h2>Bob's</h2>
-          <p>Fast-Food</p>
-      </ion-item>
-  </ion-card> 
-  <ion-card (click)="teste()" >
-      <ion-item>
-          <ion-avatar item-start>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgHPY_eGffn45FCj9otEs9HdaHWO3Adk0LZ57RkPeAnNcdZ3Ji">
-          </ion-avatar>
-          <h2>BeijaMeu</h2>
-          <p>Padaria</p>
-      </ion-item>
-  </ion-card> 
+
+  <ion-card (click)="teste(restaurant)" *ngFor="let restaurant of restaurants" id="{{restaurant.nome +'_'+ restaurant.id}}">
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="{{restaurant.imagem_url}}">
+      </ion-avatar>
+      <h2>{{restaurant.nome}}</h2>
+      <p>{{restaurant.segmento}}</p>
+    </ion-item>
+  </ion-card>
 
 </ion-content>

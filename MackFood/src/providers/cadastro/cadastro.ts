@@ -19,15 +19,15 @@ export class CadastroProvider {
     console.log('Hello CadastroProvider Provider');
     this.headers = new Headers({ 'Content-Type': 'application/json' });
     this.options = new RequestOptions({ headers: this.headers });
-    this.api = 'https://api-mackfood.herokuapp.com';
+    this.api = 'https://mackfood-api.herokuapp.com/api/';
   }
 
-  cadastraUser(userCadData, opc) {
+  cadastraUser(userCadData, p) {
     console.log(userCadData);
     console.log(this.options);
 
     return this.http
-      .post(`${this.api}${opc}`, userCadData, this.options)
+      .post(`${this.api}${p}`, userCadData, this.options)
       .map(this.extractData);
 
   }

@@ -22,6 +22,14 @@
             <ion-label floating>Senha</ion-label>
             <ion-input formControlName="password" type="password" name="senha"></ion-input>
           </ion-item>
+          <ion-item>
+            <ion-label floating>Segmento</ion-label>
+            <ion-input formControlName="segmento" type="text" name="segmento"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label floating>Logo-URL</ion-label>
+            <ion-input formControlName="imagem_url" type="text" name="imagem_url"></ion-input>
+          </ion-item>
           <button ion-button block [disabled]="estabCad.invalid || estabCad.untouched">Cadastrar Estabelecimento</button>
         </form>
       </ion-list>
