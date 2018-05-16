@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { PedidoPage } from '../pedido/pedido';
 
 /**
- * Generated class for the PedidosPage page.
+ * Generated class for the PedidoPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -11,21 +10,16 @@ import { PedidoPage } from '../pedido/pedido';
 
 @IonicPage()
 @Component({
-  selector: 'page-pedidos',
-  templateUrl: 'pedidos.html',
+  selector: 'page-pedido',
+  templateUrl: 'pedido.html',
 })
-export class PedidosPage {
+export class PedidoPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad PedidosPage');
-  }
-
-  teste(){
-    console.log('oi')
-    this.navCtrl.push(PedidoPage);
+    console.log('ionViewDidLoad PedidoPage');
   }
 
 }

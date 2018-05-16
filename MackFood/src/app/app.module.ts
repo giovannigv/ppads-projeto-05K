@@ -21,6 +21,7 @@ import { RegistraLanchonetePage } from '../pages/registra-lanchonete/registra-la
 import { RegistrarPage } from '../pages/registrar/registrar';
 import { RestaurantesPage } from '../pages/restaurantes/restaurantes';
 import { SolicitacoesPage } from '../pages/solicitacoes/solicitacoes';
+import { PedidoPage } from '../pages/pedido/pedido';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { SolicitacoesPage } from '../pages/solicitacoes/solicitacoes';
     ProdutosPage,
     SolicitacoesPage,
     NovoProdutoPage,
-    CardapioPage
+    CardapioPage,
+    PedidoPage
   ],
   imports: [
     BrowserModule,
@@ -57,7 +59,8 @@ import { SolicitacoesPage } from '../pages/solicitacoes/solicitacoes';
     ProdutosPage,
     SolicitacoesPage,
     NovoProdutoPage,
-    CardapioPage
+    CardapioPage,
+    PedidoPage
   ],
   providers: [
     HttpModule,
