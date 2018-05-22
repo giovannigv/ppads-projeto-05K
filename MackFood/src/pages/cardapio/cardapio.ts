@@ -21,12 +21,12 @@ export class CardapioPage {
     private navCtrl: NavController,
     private navParams: NavParams
   ) {
+    this.t = this.dataProvider.getToken();
     this.restSelc = this.dataProvider.getRestSelc();
    }
 
   ionViewDidLoad() {
-    this.t = this.dataProvider.getToken();
-    this.consultaProvider.consultaAnything(`restaurantes/${this.restSelc.id}/produtos`, this.t.token).subscribe(
+    this.consultaProvider.consultaAnything(`restaurantes/${this.restSelc.id}/produtos`).subscribe(
       res => {
         console.log(res);
         this.cardapio = res.produtos;

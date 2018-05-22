@@ -8,9 +8,7 @@ export class DataProvider {
   private restSelc: any;
 
 
-  constructor() {
-    console.log('Hello DataProvider Provider');
-  }
+  constructor() { }
 
   getProdSelc() {
     return this.prodSelc;

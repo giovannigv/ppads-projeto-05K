@@ -24,22 +24,23 @@ export class ConsultaProvider {
   }
 
   validaUsuario(userData, p) {
-
-    console.log(userData);
-
     this.headers.append('Authorization', `Basic ${btoa(userData.username + ':' + userData.password)}`);
     return this.http
       .get(`${this.api}${p}`, this.options)
       .map(this.extractData);
   }
 
-  consultaAnything(p, t) {
+  consultaAnything(p) {
     console.log(p);
-    console.log(t);
-    this.headers.append('Authorization', `Bearer  ${t}`);
+    console.log(this.headers);
     return this.http
       .get(`${this.api}${p}`, this.options)
       .map(this.extractData);
+  }
+
+  addTokenToHeader(t) {
+    this.headers.delete('Authorization');
+    this.headers.append('x-access-token', `${t.token}`);
   }
 
   private extractData(res: Response) {

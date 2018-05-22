@@ -1,13 +1,9 @@
+import { DataProvider } from './../../providers/data/data';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { PedidoPage } from '../pedido/pedido';
 
-/**
- * Generated class for the PedidosPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { ConsultaProvider } from './../../providers/consulta/consulta';
+import { PedidoPage } from '../pedido/pedido';
 
 @IonicPage()
 @Component({
@@ -16,11 +12,26 @@ import { PedidoPage } from '../pedido/pedido';
 })
 export class PedidosPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  private t: any;
+  private pedidos = [];
+
+  constructor(
+    private consultaProvider: ConsultaProvider,
+    private dataProvider: DataProvider,
+    private navCtrl: NavController, 
+    private navParams: NavParams)
+     {
+      this.t = this.dataProvider.getToken();
+      console.log(this.t);
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad PedidosPage');
+    this.consultaProvider.consultaAnything(`users/${this.t.id}/pedidos`).subscribe(
+      res => {
+        this.pedidos = res;
+        console.log(this.pedidos);
+      }
+    );
   }
 
   teste(){

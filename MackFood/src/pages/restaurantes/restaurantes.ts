@@ -21,12 +21,14 @@ export class RestaurantesPage {
     private menuCtrl: MenuController,
     private navCtrl: NavController,
     private navParams: NavParams
-  ) { }
+  ) {
+    this.t = this.dataProvider.getToken();
+  }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad RestaurantesPage');
     this.t = this.dataProvider.getToken();
-    this.consultaProvider.consultaAnything('restaurantes', this.t.token).subscribe(
+    this.consultaProvider.consultaAnything('restaurantes').subscribe(
       res => {
         this.restaurants = res.restaurants;
         console.log(this.restaurants);

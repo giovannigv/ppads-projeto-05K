@@ -47,6 +47,7 @@ export class HomePage {
       res => {
         this.loading.dismiss();
         this.dataProvider.setToken(res);
+        this.consultaProvider.addTokenToHeader(res);
         if (res.type === 'cliente') {
           this.navCtrl.setRoot(MenuUsuarioPage);
         } else if (res.type === 'restaurante') {

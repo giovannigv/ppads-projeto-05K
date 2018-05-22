@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
+import { ConsultaProvider } from './../../providers/consulta/consulta';
 import { CardapioPage } from '../cardapio/cardapio';
+import { DataProvider } from './../../providers/data/data';
 
 @IonicPage()
 @Component({
@@ -10,11 +12,26 @@ import { CardapioPage } from '../cardapio/cardapio';
 })
 export class SolicitacoesPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  private t: any;
+  private pedidos = [];
+
+  constructor(
+    private consultaProvider: ConsultaProvider,
+    private dataProvider: DataProvider,
+    private navCtrl: NavController,
+    private navParams: NavParams
+  ) {
+    this.t = this.dataProvider.getToken();
+    console.log(this.t);
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SolicitacoesPage');
+    console.log('Teste teste...');
+    this.consultaProvider.consultaAnything(`restaurantes/${this.t.id}/pedidos`).subscribe(
+      res => {this.pedidos = res.pedidos; console.log(this.pedidos)} 
+    );
+
   }
 
   teste() {

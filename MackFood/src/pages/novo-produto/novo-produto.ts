@@ -1,14 +1,10 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
-import { CadastroProvider } from '../../providers/cadastro/cadastro';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
-/**
- * Generated class for the NovoProdutoPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { CadastroProvider } from '../../providers/cadastro/cadastro';
+import { DataProvider } from './../../providers/data/data';
+import { ProdutosPage } from '../produtos/produtos';
 
 @IonicPage()
 @Component({
@@ -18,35 +14,41 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class NovoProdutoPage {
 
   private novProd: FormGroup;
+  private t: any;
 
-  constructor(public navCtrl: NavController, 
-              public navParams: NavParams,
-              private cadastroProvider: CadastroProvider,
-              private fb: FormBuilder,
-              private alertCtrl: AlertController) {
-  }
+  constructor(
+    private alertCtrl: AlertController,
+    private cadastroProvider: CadastroProvider,
+    private dataProvider: DataProvider,
+    private fb: FormBuilder,
+    private navCtrl: NavController,
+    private navParams: NavParams
+  ) { }
 
   ngOnInit() {
+    this.t = this.dataProvider.getToken();
     this.novProd = this.fb.group({
-      email: ['', [Validators.required, Validators.email]],
       nome: ['', [Validators.required]],
-      password: ['', [Validators.required]]
+      descricao: ['', [Validators.required]],
+      imagem_url: ['', [Validators.required]],
+      preco: ['', [Validators.required]]
     });
   }
 
-  onSubmit(){
+  onSubmit() {
     console.log(this.novProd.value);
-    this.cadastroProvider.cadastraUser(this.novProd.value,'').subscribe(
-      res => {
-        console.log(res);
-        setTimeout(() => this.presentAlert('Novo Produto', this.novProd.value.nome+' = '+this.novProd.value.password ), 100);
-        //this.navCtrl.setRoot(HomePage);
-      },
-      err => {
-        console.log(err);
-        this.presentAlert('Ops... Temos um problema', err._body);
-      }
-    )
+    this.cadastroProvider.cadastraAnything(this.novProd.value, `restaurantes/${this.t.id}/produtos`, this.t.token)
+      .subscribe(
+        res => {
+          console.log(res);
+          setTimeout(() => this.presentAlert('Novo Produto', this.novProd.value.nome + ' = ' + this.novProd.value.password), 100);
+          this.navCtrl.setRoot(ProdutosPage);
+        },
+        err => {
+          console.log(err);
+          this.presentAlert('Ops... Temos um problema', err._body);
+        }
+      );
   }
 
   presentAlert(title: string, errorMsg: string) {
