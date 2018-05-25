@@ -28,14 +28,14 @@ export class PedidosPage {
   ionViewDidLoad() {
     this.consultaProvider.consultaAnything(`users/${this.t.id}/pedidos`).subscribe(
       res => {
-        this.pedidos = res;
+        this.pedidos = res.pedidos;
         console.log(this.pedidos);
       }
     );
   }
 
-  teste(){
-    console.log('oi')
+  teste(obj){
+    this.dataProvider.setPedSelc(obj);
     this.navCtrl.push(PedidoPage);
   }
 

@@ -5,13 +5,17 @@ export class DataProvider {
 
   private token: any;
   private prodSelc: any;
+  private pedSelc: any;
   private restSelc: any;
-
 
   constructor() { }
 
   getProdSelc() {
     return this.prodSelc;
+  }
+
+  getPedSelc() {
+    return this.pedSelc;
   }
 
   getRestSelc() {
@@ -20,6 +24,11 @@ export class DataProvider {
 
   getToken() {
     return this.token;
+  }
+
+  setPedSelc(obj) {
+    console.log(obj);
+    this.pedSelc = obj;
   }
 
   setProdSelc(obj) {

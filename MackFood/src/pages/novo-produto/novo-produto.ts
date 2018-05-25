@@ -37,7 +37,7 @@ export class NovoProdutoPage {
 
   onSubmit() {
     console.log(this.novProd.value);
-    this.cadastroProvider.cadastraAnything(this.novProd.value, `restaurantes/${this.t.id}/produtos`, this.t.token)
+    this.cadastroProvider.cadastraAnything(this.novProd.value, `restaurantes/${this.t.id}/produtos`)
       .subscribe(
         res => {
           console.log(res);
