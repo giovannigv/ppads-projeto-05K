@@ -87,3 +87,38 @@ Em cada procedimento de teste, siga o modelo abaixo:
 | 2 | Preencher os campos **Email** e **password** com os dados de um usuário com perfil de **Estabelecimento**.| Apresentação do painel do Estabelecimento na aba de pedidos. |
 | 3 | Selecionar o Pedido | Apresentação do pedido. |
 ***Revisar***
+
+
+**Nome do caso de uso:** Verificar Pedido
+
+**Preparação:**
+
+* Criar no usuário do tipo **Cliente** no sistema.
+
+**Procedimento de teste:**
+
+| Passo | Procedimento | Resultado esperado |
+| --- | --- | --- |
+| 1 | Executar o navegador Chrome e acesse a URL https://projeto-mackfood-05k.mybluemix.net/ | Apresentação da tela de login do sistema. |
+| 2 | Preencher os campos **Email** e **password** com os dados de um usuário com perfil de **Cliente**.| Apresentação do painel do Cliente. |
+| 3 | Selecionar Produto | Apresentação da tela de pedidos com pedido incluso. |
+***Incompleto***
+
+
+
+**Nome do caso de uso:** Realizar pagamento
+
+**Preparação:**
+
+* Criar no usuário do tipo **Cliente** no sistema.
+* Ter pedidos cadastrados no carrinho.
+
+**Procedimento de teste:**
+
+| Passo | Procedimento | Resultado esperado |
+| --- | --- | --- |
+| 1 | Executar o navegador Chrome e acesse a URL https://projeto-mackfood-05k.mybluemix.net/ | Apresentação da tela de login do sistema. |
+| 2 | Preencher os campos **Email** e **password** com os dados de um usuário com perfil de **Cliente**.| Apresentação do painel do Cliente. |
+| 3 | Selecionar a aba de **Pedidos** | Apresentação da tela de pedidos com pedido incluso. |
+| 4 | Selecionar a opção **Realizar Pagamento** | Apresentação da tela de pagamento. |
+| 5 | Selecionar a opção **Confirmar Pagamento** | Exibição de mensagem de pagamento com sucesso. |
