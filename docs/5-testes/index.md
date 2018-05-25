@@ -18,3 +18,18 @@ Em cada procedimento de teste, siga o modelo abaixo:
 | 1 | Executar o navegador Chrome e acesse a URL https://teste.mackenzie.br | Apresentação da tela de login do sistema |
 | 2 | Preencher os campos **login** e **password** com os dados de um usuário com perfil de **Funcionário**. | Apresentação do painel do Funcionário |
 | 3 | Clicar no link **Listar todas as tarefas**. | Apresentação das 5 tarefas cadastradas para o funcionário. |
+
+
+**Nome do caso de uso:** Manter cadastro cliente
+
+**Preparação:**
+
+* Não é necessário preparação.
+
+**Procedimento de teste:**
+
+| Passo | Procedimento | Resultado esperado |
+| --- | --- | --- |
+| 1 | Executar o navegador Chrome e acesse a URL https://projeto-mackfood-05k.mybluemix.net/ | Apresentação da tela de login do sistema. |
+| 2 | Selecionar a opção **Registrar** | Apresentação da tela de Registro de cliente. |
+| 3 | Preencher todos os campos corretamente e selecionar a opção **Cadastrar** | Exibição de mensagem de cadastro com sucesso. |
