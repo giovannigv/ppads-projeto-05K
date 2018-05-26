@@ -19,3 +19,20 @@ curl --request POST \
 	"password":"senha"
 }'
 ```
+
+
+* `GET` `https://mackfood-api.herokuapp.com/api/users` - Lista usuários cadastrados
+```
+curl --request GET \
+  --url https://mackfood-api.herokuapp.com/api/users \
+  --header 'x-access-token: secret'
+```
+
+
+* `DELETE` `https://mackfood-api.herokuapp.com/api/users/<public_id>` - Remove um usuário
+```
+curl --request DELETE \
+  --url https://mackfood-api.herokuapp.com/api/users/<public_id> \
+  --header 'x-access-token: secret'
+```
+
