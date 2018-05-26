@@ -7,6 +7,8 @@ https://documenter.getpostman.com/view/3112702/api-mackfood-development/RW1gCwQ4
 
 ## API
 
+###Clientes
+
 * `POST` `https://mackfood-api.herokuapp.com/api/users` - Cadastra Cliente
 Exemplo:
 ```
@@ -21,7 +23,7 @@ curl --request POST \
 ```
 
 
-* `GET` `https://mackfood-api.herokuapp.com/api/users` - Lista usuários cadastrados
+* `GET` `https://mackfood-api.herokuapp.com/api/users` - Lista clientes cadastrados
 ```
 curl --request GET \
   --url https://mackfood-api.herokuapp.com/api/users \
@@ -29,7 +31,7 @@ curl --request GET \
 ```
 
 
-* `DELETE` `https://mackfood-api.herokuapp.com/api/users/<public_id>` - Remove um usuário
+* `DELETE` `https://mackfood-api.herokuapp.com/api/users/<public_id>` - Remove um cliente
 ```
 curl --request DELETE \
   --url https://mackfood-api.herokuapp.com/api/users/<public_id> \
