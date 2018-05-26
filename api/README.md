@@ -112,3 +112,84 @@ curl --request GET \
   --header 'Content-Type: application/json'
 ```
 
+### Pedidos
+
+* `POST` `https://mackfood-api.herokuapp.com/api/users/<user_id>/pedidos` - Registro de pedido
+Exemplo:
+```
+curl --request POST \
+  --url https://mackfood-api.herokuapp.com/api/users/1/pedidos \
+  --header 'Content-Type: application/json' \
+  --header 'x-access-token: token' \
+  --data '{
+  "restaurante_id":1,
+  "total":79.00,
+  "itens_pedido": [
+    {
+      "nome":"BOBS BOX",
+      "preco":28.5,
+      "quantity": 2,
+       "total": 57.00
+    },
+      {
+      "nome":"X-salada",
+      "preco":22.00,
+      "quantity": 1,
+       "total": 22.00
+    }  
+    ]
+}'
+```
+
+* `GET` `https://mackfood-api.herokuapp.com/api/users/user_id/pedidos` - Lista pedidos de um cliente
+Exemplo:
+```
+curl --request GET \
+  --url https://mackfood-api.herokuapp.com/api/users/1/pedidos \
+  --header 'x-access-token: <token>'
+```
+
+* `GET` `https://mackfood-api.herokuapp.com/api/users/<user_id>/pedidos/<pedido_id>` - Retorna detalhes de um pedido
+Exemplo:
+```
+curl --request GET \
+  --url https://mackfood-api.herokuapp.com/api/users/<user_id>/pedidos/<pedido_id> \
+  --header 'x-access-token: <token>'
+```
+
+* `GET` `https://mackfood-api.herokuapp.com/api/users/<user_id>/pedidos/<pedido_id>` - Lista pedidos para um restaurante
+Exemplo:
+```
+curl --request GET \
+  --url https://mackfood-api.herokuapp.com/api/restaurantes/<restaurante_id>/pedidos \
+  --header 'x-access-token: <token>'
+```
+
+* `GET` `https://mackfood-api.herokuapp.com/api/restaurantes/<restaurante_id>/pedidos/<pedido_id>` - Retorna detalhes de um pedido para restaurante
+Exemplo:
+```
+curl --request GET \
+  --url https://mackfood-api.herokuapp.com/api/restaurantes/1/pedidos/1 \
+  --header 'x-access-token: <token>'
+```
+
+* `PUT` `https://mackfood-api.herokuapp.com/api/restaurantes/restaurante_id/pedidos/pedido_id` - Encerra Pedido
+Exemplo:
+```
+curl --request PUT \
+  --url https://mackfood-api.herokuapp.com/api/users/<user_id>/pedidos/<pedido_id> \
+  --header 'x-access-token: <token>'
+```
+
+
+
+### Pagamento
+
+* `PUT` `https://mackfood-api.herokuapp.com/api/users/<user_id>/pedidos/<pedido_id>` - Efetua pagamento
+Exemplo:
+```
+curl --request PUT \
+  --url https://mackfood-api.herokuapp.com/api/users/user_id/pedidos/pedido_id \
+  --header 'x-access-token: <token>'
+```
+
