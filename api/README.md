@@ -38,3 +38,32 @@ curl --request DELETE \
   --header 'x-access-token: secret'
 ```
 
+### Restaurantes
+
+* `POST` `https://mackfood-api.herokuapp.com/api/restaurantes` - Cadastra Restaurante
+Exemplo:
+```
+curl --request POST \
+  --url https://mackfood-api.herokuapp.com/api/restaurantes \
+  --header 'Content-Type: application/json' \
+  --data '{
+	"nome": "Nome Restaurante",
+	"email": "email@email.com",
+	"segmento":"segmento",
+	"imagem_url":"url_imagem.png",
+	"password":"senha"
+}'
+```
+
+* `GET` `https://mackfood-api.herokuapp.com/api/restaurantes` - Lista restaurantes cadastrados
+```
+curl --request GET \
+  --url https://mackfood-api.herokuapp.com/api/restaurantes
+```
+
+* `GET` `https://mackfood-api.herokuapp.com/api/restaurantes/id` - Retorna detalhes de um restaurante
+```
+curl --request GET \
+  --url https://mackfood-api.herokuapp.com/api/restaurantes/<id>
+```
+
