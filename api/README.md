@@ -7,7 +7,7 @@ https://documenter.getpostman.com/view/3112702/api-mackfood-development/RW1gCwQ4
 
 ## API
 
-###Clientes
+### Clientes
 
 * `POST` `https://mackfood-api.herokuapp.com/api/users` - Cadastra Cliente
 Exemplo:
