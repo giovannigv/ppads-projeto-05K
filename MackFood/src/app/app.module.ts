@@ -5,6 +5,7 @@ import { Http, HttpModule } from '@angular/http';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
+import { CarrinhoPage } from '../pages/carrinho/carrinho';
 import { CadastroProvider } from '../providers/cadastro/cadastro';
 import { CardapioPage } from '../pages/cardapio/cardapio';
 import { ConsultaProvider } from '../providers/consulta/consulta';
@@ -38,7 +39,8 @@ import { PedidoPage } from '../pages/pedido/pedido';
     SolicitacoesPage,
     NovoProdutoPage,
     CardapioPage,
-    PedidoPage
+    PedidoPage,
+    CarrinhoPage
   ],
   imports: [
     BrowserModule,
@@ -60,7 +62,8 @@ import { PedidoPage } from '../pages/pedido/pedido';
     SolicitacoesPage,
     NovoProdutoPage,
     CardapioPage,
-    PedidoPage
+    PedidoPage,
+    CarrinhoPage
   ],
   providers: [
     HttpModule,

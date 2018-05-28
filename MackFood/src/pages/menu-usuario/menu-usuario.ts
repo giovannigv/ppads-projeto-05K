@@ -5,13 +5,6 @@ import { RestaurantesPage } from '../restaurantes/restaurantes';
 
 import { PedidosPage } from '../pedidos/pedidos';
 
-/**
- * Generated class for the MenuUsuarioPage tabs.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
 @IonicPage()
 @Component({
   selector: 'page-menu-usuario',

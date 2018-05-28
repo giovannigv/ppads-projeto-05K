@@ -2,6 +2,12 @@
 
   <ion-navbar>
     <ion-title>{{restSelc.nome}}</ion-title>
+
+    <ion-buttons end>
+      <button ion-button (click)="carrinhoCompras()">
+        <ion-icon name="cart"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 
 </ion-header>
@@ -25,7 +31,7 @@
                 <div><br><br><br>R${{prod.preco}}<br><br><br></div>
                 </ion-col>
               </ion-row>
-              <button ion-button color="primary">Add Carrinho</button>
+              <button ion-button color="primary" (click)="addToCart(prod)">Add Carrinho</button>
         </ion-card-content>
       </ion-card>
 

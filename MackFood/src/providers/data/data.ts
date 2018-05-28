@@ -3,12 +3,17 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class DataProvider {
 
-  private token: any;
-  private prodSelc: any;
+  private cart = [];
   private pedSelc: any;
+  private prodSelc: any;
   private restSelc: any;
+  private token: any;
 
   constructor() { }
+
+  getCart() {
+    return this.cart;
+  }
 
   getProdSelc() {
     return this.prodSelc;
@@ -24,6 +29,11 @@ export class DataProvider {
 
   getToken() {
     return this.token;
+  }
+
+  setCart(obj) {
+    console.log(obj);
+    this.cart.push(obj);
   }
 
   setPedSelc(obj) {

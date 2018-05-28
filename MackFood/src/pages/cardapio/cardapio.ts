@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
+import { CarrinhoPage } from './../carrinho/carrinho';
 import { ConsultaProvider } from './../../providers/consulta/consulta';
 import { DataProvider } from './../../providers/data/data';
 
@@ -35,6 +36,13 @@ export class CardapioPage {
     );
   }
 
+  addToCart(obj) {
+    console.log(obj);
+    this.dataProvider.setCart(obj);
+  }
 
+  carrinhoCompras() {
+    this.navCtrl.push(CarrinhoPage);
+  }
 
 }

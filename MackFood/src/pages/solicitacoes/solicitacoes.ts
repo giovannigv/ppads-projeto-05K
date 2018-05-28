@@ -26,8 +26,6 @@ export class SolicitacoesPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad SolicitacoesPage');
-    console.log('Teste teste...');
     this.consultaProvider.consultaAnything(`restaurantes/${this.t.id}/pedidos`).subscribe(
       res => {this.pedidos = res.pedidos; console.log(this.pedidos)} 
     );

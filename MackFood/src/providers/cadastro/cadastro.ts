@@ -21,10 +21,10 @@ export class CadastroProvider {
     private dataProvider: DataProvider,
     private http: Http
   ) {
-    this.addTokenToHeader(this.dataProvider.getToken());
+    this.api = 'https://mackfood-api.herokuapp.com/api/';
     this.headers = new Headers({ 'Content-Type': 'application/json' });
     this.options = new RequestOptions({ headers: this.headers });
-    this.api = 'https://mackfood-api.herokuapp.com/api/';
+    this.addTokenToHeader(this.dataProvider.getToken());
   }
 
   cadastraUser(userCadData, p) {
@@ -36,12 +36,15 @@ export class CadastroProvider {
 
   cadastraAnything(userCadData, p) {
     console.log(userCadData);
+    console.log(`${this.api}${p}`);
+    console.log(this.headers)
     return this.http
       .post(`${this.api}${p}`, userCadData, this.options)
       .map(this.extractData);
   }
 
   addTokenToHeader(t) {
+    console.log(this.headers);
     this.headers.delete('Authorization');
     this.headers.append('x-access-token', `${t.token}`);
   }
