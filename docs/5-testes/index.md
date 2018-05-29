@@ -50,7 +50,7 @@ Em cada procedimento de teste, siga o modelo abaixo:
 | 1 | Executar o navegador Chrome e acesse a URL https://projeto-mackfood-05k.mybluemix.net/ | Apresentação da tela de login do sistema. |
 | 2 | Selecionar a opção **Registrar** | Apresentação da tela de Registro de cliente. |
 | 3 | Selecionar a opção **Clique aqui e cadastre seu estabelecimento** | Apresentação da tela de Cadastro de estabelecimento. |
-| 4 | Preencha o campo de nome do estabelecimento com "Verde", email com "verde@test.com, senha com "verde123", segmento com "Comidas Naturais", url da imagem com "https://cdn.colab55.com/images/1464357428/studio/product/11575/art/37045/stickers/fosco/standard/1.png" e selecione a opção **Cadastrar Estabelecimento** | Exibição de mensagem de cadastro com sucesso. |
+| 4 | Preencha o campo nome do estabelecimento com "Verde", email com "verde@test.com", senha com "verde123", segmento com "Comidas Naturais", url da imagem com "https://cdn.colab55.com/images/1464357428/studio/product/11575/art/37045/stickers/fosco/standard/1.png" e selecione a opção **Cadastrar Estabelecimento** | Exibição de mensagem de cadastro com sucesso. |
 
 
 
@@ -77,30 +77,30 @@ Em cada procedimento de teste, siga o modelo abaixo:
 
 **Preparação:**
 
-* Criar no sistema um estabelecimento
+* Criar no sistema o estabelecimento Verde.
 
 **Procedimento de teste:**
 
 | Passo | Procedimento | Resultado esperado |
 | --- | --- | --- |
 | 1 | Executar o navegador Chrome e acesse a URL https://projeto-mackfood-05k.mybluemix.net/ | Apresentação da tela de login do sistema. |
-| 2 | Preencher os campos **Email** e **password** com os dados de um usuário com perfil de **Estabelecimento**.| Apresentação do painel do Estabelecimento na aba de pedidos. |
+| 2 | Preencher os campos **Email** com "verde@test.com" e **password** com "verde123". | Apresentação do painel do Estabelecimento na aba de pedidos. |
 | 3 | Selecionar o Pedido | Apresentação do pedido. |
 ***Revisar***
 
 
-**Nome do caso de uso:** Verificar Pedido
+**Nome do caso de uso:** Manter Pedido
 
 **Preparação:**
 
-* Criar no usuário do tipo **Cliente** no sistema.
+* Criar no sistema o cliente Tomate.
 
 **Procedimento de teste:**
 
 | Passo | Procedimento | Resultado esperado |
 | --- | --- | --- |
 | 1 | Executar o navegador Chrome e acesse a URL https://projeto-mackfood-05k.mybluemix.net/ | Apresentação da tela de login do sistema. |
-| 2 | Preencher os campos **Email** e **password** com os dados de um usuário com perfil de **Cliente**.| Apresentação do painel do Cliente. |
+| 2 | Preencher os campos **Email** com "tomate@test.com" e **password** com "tomate123". | Apresentação do painel do Cliente. |
 | 3 | Selecionar Produto | Apresentação da tela de pedidos com pedido incluso. |
 ***Incompleto***
 
@@ -110,7 +110,7 @@ Em cada procedimento de teste, siga o modelo abaixo:
 
 **Preparação:**
 
-* Criar no usuário do tipo **Cliente** no sistema.
+* Criar no sistema o cliente Tomate.
 * Ter pedidos cadastrados no carrinho.
 
 **Procedimento de teste:**
@@ -118,7 +118,8 @@ Em cada procedimento de teste, siga o modelo abaixo:
 | Passo | Procedimento | Resultado esperado |
 | --- | --- | --- |
 | 1 | Executar o navegador Chrome e acesse a URL https://projeto-mackfood-05k.mybluemix.net/ | Apresentação da tela de login do sistema. |
-| 2 | Preencher os campos **Email** e **password** com os dados de um usuário com perfil de **Cliente**.| Apresentação do painel do Cliente. |
+| 2 | Preencher os campos **Email** com "tomate@test.com" e **password** com "tomate123". | Apresentação do painel do Cliente. |
 | 3 | Selecionar a aba de **Pedidos** | Apresentação da tela de pedidos com pedido incluso. |
 | 4 | Selecionar a opção **Realizar Pagamento** | Apresentação da tela de pagamento. |
 | 5 | Selecionar a opção **Confirmar Pagamento** | Exibição de mensagem de pagamento com sucesso. |
+***Incompleto***
