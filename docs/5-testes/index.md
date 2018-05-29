@@ -33,7 +33,7 @@ Em cada procedimento de teste, siga o modelo abaixo:
 | --- | --- | --- |
 | 1 | Executar o navegador Chrome e acesse a URL https://projeto-mackfood-05k.mybluemix.net/ | Apresentação da tela de login do sistema. |
 | 2 | Selecionar a opção **Registrar** | Apresentação da tela de Registro de cliente. |
-| 3 | Preencher todos os campos corretamente e selecionar a opção **Cadastrar** | Exibição de mensagem de cadastro com sucesso. |
+| 3 | Preencha o campo nome com "Tomate", email com "tomate@test.com", senha com "tomate123" e selecione a opção **Cadastrar** | Exibição de mensagem de cadastro com sucesso. |
 
 
 
@@ -50,7 +50,7 @@ Em cada procedimento de teste, siga o modelo abaixo:
 | 1 | Executar o navegador Chrome e acesse a URL https://projeto-mackfood-05k.mybluemix.net/ | Apresentação da tela de login do sistema. |
 | 2 | Selecionar a opção **Registrar** | Apresentação da tela de Registro de cliente. |
 | 3 | Selecionar a opção **Clique aqui e cadastre seu estabelecimento** | Apresentação da tela de Cadastro de estabelecimento. |
-| 4 | Preencher todos os campos corretamente e selecionar a opção **Cadastrar Estabelecimento** | Exibição de mensagem de cadastro com sucesso. |
+| 4 | Preencha o campo de nome do estabelecimento com "Verde", email com "verde@test.com, senha com "verde123", segmento com "Comidas Naturais", url da imagem com "https://cdn.colab55.com/images/1464357428/studio/product/11575/art/37045/stickers/fosco/standard/1.png" e selecione a opção **Cadastrar Estabelecimento** | Exibição de mensagem de cadastro com sucesso. |
 
 
 
@@ -58,17 +58,17 @@ Em cada procedimento de teste, siga o modelo abaixo:
 
 **Preparação:**
 
-* Criar no sistema um estabelecimento
+* Criar no sistema o estabelecimento Verde.
 
 **Procedimento de teste:**
 
 | Passo | Procedimento | Resultado esperado |
 | --- | --- | --- |
 | 1 | Executar o navegador Chrome e acesse a URL https://projeto-mackfood-05k.mybluemix.net/ | Apresentação da tela de login do sistema. |
-| 2 | Preencher os campos **Email** e **password** com os dados de um usuário com perfil de **Estabelecimento**.| Apresentação do painel do Estabelecimento |
+| 2 | Preencher os campos **Email** com "verde@test.com" e **password** com "verde123".| Apresentação do painel do Estabelecimento |
 | 3 | Selecionar a aba de **produtos** | Apresentação da tela de Produtos. |
 | 4 | Clicar no botão **"+"**| Apresentação da tela de Cadastro de Produto. |
-| 5 | Preencher todos os campos corretamente e selecionar a opção **Cadastrar Produto** | Exibição de mensagem de cadastro com sucesso. |
+| 5 | Preencha o campo nome com "Suco Verde", descrição com "Suco natural que possue muitos benefícios, como grande quantidade de fibras, minerais, vitaminas e diferentes funções que ajudam no crescimento, desenvolvimento e na manutenção das atuações metabólicas que acontecem no nosso organismo.", preço com "12,00", imagem do produto com "https://abrilmdemulher.files.wordpress.com/2016/10/receita-suco-verde-detox-65701.jpg?quality=90&strip=info" e selecione a opção **Cadastrar Produto** | Exibição de mensagem de cadastro com sucesso. |
 ***Revisar***
 
 
