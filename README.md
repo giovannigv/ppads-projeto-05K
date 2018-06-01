@@ -12,4 +12,4 @@
 
 ## Link para aplicação ONLINE
 
-https://projeto-mackfood-05k.mybluemix.net/
+https://proj-mackfood-05k.mybluemix.net/
