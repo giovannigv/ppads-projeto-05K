@@ -1,0 +1,38 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{restSelc.nome}}</ion-title>
+
+    <ion-buttons end>
+      <button ion-button (click)="carrinhoCompras()">
+        <ion-icon name="cart"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+<ion-content>
+
+      <ion-card *ngFor="let prod of cardapio">
+        <div class="img">
+          <img src="{{prod.imagem_url}}"/>
+        </div>
+        <ion-card-content>
+            <ion-row>
+                <ion-col>
+                  <ion-card-title>
+                      {{prod.nome}}
+                  </ion-card-title>
+                  <p>
+                      {{prod.descricao}}
+                  </p>
+                </ion-col>
+              <ion-col text-right col-3>
+                <div><br><br><br>R${{prod.preco}}<br><br><br></div>
+                </ion-col>
+              </ion-row>
+              <button ion-button color="primary" (click)="addToCart(prod)">Add Carrinho</button>
+        </ion-card-content>
+      </ion-card>
+
+</ion-content>

@@ -3,15 +3,15 @@
 
     <ion-header>
       <ion-navbar>
-        <ion-title>Novo Usuário</ion-title>
+        <ion-title>Novo Estabelecimento</ion-title>
       </ion-navbar>
     </ion-header>
 
     <ion-card-content>
       <ion-list no-lines>
-        <form (ngSubmit)="onSubmit()" [formGroup]="userCad">
+        <form (ngSubmit)="onSubmit()" [formGroup]="estabCad">
           <ion-item>
-            <ion-label floating>Nome</ion-label>
+            <ion-label floating>Nome do Estabelecimento</ion-label>
             <ion-input formControlName="nome" type="text" name="nome"></ion-input>
           </ion-item>
           <ion-item>
@@ -22,16 +22,17 @@
             <ion-label floating>Senha</ion-label>
             <ion-input formControlName="password" type="password" name="senha"></ion-input>
           </ion-item>
-          <button ion-button block [disabled]="userCad.invalid || userCad.untouched">Cadastrar</button>
+          <ion-item>
+            <ion-label floating>Segmento</ion-label>
+            <ion-input formControlName="segmento" type="text" name="segmento"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label floating>Logo-URL</ion-label>
+            <ion-input formControlName="imagem_url" type="text" name="imagem_url"></ion-input>
+          </ion-item>
+          <button ion-button block [disabled]="estabCad.invalid || estabCad.untouched">Cadastrar Estabelecimento</button>
         </form>
       </ion-list>
     </ion-card-content>
-    <ion-card-content>
-      <div>
-        <h3>Clique <a (click)="signLanchonete()">aqui</a> e cadastre seu Estabelecimento</h3>
-      </div>
-    </ion-card-content>
   </ion-card>
 </ion-content>
-
-

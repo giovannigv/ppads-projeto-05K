@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons start>
+      <button ion-button>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title align-title="center">Pedidos</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-card *ngFor="let pedido of pedidos" (click)="teste(pedido)">
+    <ion-item>
+      <ion-icon item-start name="basket"></ion-icon>
+
+      <h2>Pedido #{{pedido.id}}</h2>
+      <p>Valor: R${{pedido.total}}</p>
+      <p>Status: {{pedido.status}}</p>
+    </ion-item>
+  </ion-card>
+
+</ion-content>

@@ -1,0 +1,37 @@
+[{
+    "ID": "1",
+    "Nome": "Bob's",
+    "segmento": "FastFood",
+    "cardapio": [{
+        "ID": "1",
+        "produto": "Big Bob",
+        "descricao": "Lanche",
+        "valor": "R$3,00"
+      },
+      {
+        "ID": "2",
+        "produto": "Big Big Bob",
+        "descricao": "Lanchao",
+        "valor": "R$2,00"
+      }
+    ]
+  },
+  {
+    "ID": "2",
+    "Nome": "BeijaMeu",
+    "segmento": "Padaria",
+    "cardapio": [{
+        "ID": "1",
+        "produto": "Croasaint de Chocolate",
+        "descricao": "Muito Bom",
+        "valor": "R$200,00"
+      },
+      {
+        "ID": "2",
+        "produto": "Cappuccino",
+        "descricao": "Ble",
+        "valor": "R$50,00"
+      }
+    ]
+  }
+]

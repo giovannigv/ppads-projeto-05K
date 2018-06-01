@@ -1,0 +1,34 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Pedido</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+  <ion-card *ngFor="let ped of pedido">
+      <ion-item>
+        <h2>Pedido #{{ped.id}}</h2>
+        <ion-row *ngFor="let item of ped.itens_pedido">
+            <ion-col>
+                <p>{{item.nome}}</p>
+            </ion-col>
+            <ion-col>
+                <p text-right>{{item.quantity}} x R${{item.preco}}</p>
+            </ion-col>
+            <ion-col>
+                <p text-right>= R$ {{item.total}}</p>
+            </ion-col>
+          </ion-row>
+      </ion-item>
+      <ion-row>
+        <ion-col>
+          <P text-right>Total = R$ {{ped.total}}</P>
+        </ion-col>
+      </ion-row>
+      <button ion-button color="green">Pagar</button>
+  </ion-card>
+
+</ion-content>
